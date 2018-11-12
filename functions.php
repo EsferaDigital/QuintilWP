@@ -22,7 +22,7 @@ if ( ! function_exists( 'quintil_setup' ) ) :
 		 * If you're building a theme based on Quintil, use a find and replace
 		 * to change 'quintil' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'quintil', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'Quintil', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'quintil_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'quintil' ),
+			'menu-1' => esc_html__( 'Primary', 'Quintil' ),
 		) );
 
 		/*
@@ -105,9 +105,9 @@ add_action( 'after_setup_theme', 'quintil_content_width', 0 );
  */
 function quintil_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'quintil' ),
+		'name'          => esc_html__( 'Sidebar', 'Quintil' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'quintil' ),
+		'description'   => esc_html__( 'Add widgets here.', 'Quintil' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

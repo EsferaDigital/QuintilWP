@@ -18,7 +18,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Diseñado: %1$s by %2$s.', 'quintil' ), 'quintil', '<a href="https://esferadigital.cl" target="_blank">Esfera Digital</a>' );
+				printf( esc_html__( 'Desarrollado por: %1$s por %2$s.', 'quintil' ), 'Quintil', '<a href="https://esferadigital.cl" target="_blank">Esfera Digital</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
