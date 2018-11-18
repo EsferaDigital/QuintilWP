@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const babel = require('gulp-babel');
+const bust = require('gulp-cache-bust');
 const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
 const gulpsass = require('gulp-sass');
@@ -19,8 +20,16 @@ let onError = function(err){
   this.emit('end');
 }
 
+gulp.task('cache', () => {
+	gulp.src('*.php')
+    .pipe(bust({
+        type: 'timestamp'
+    }))
+    .pipe(gulp.dest('.'));
+});
+
 gulp.task('sass', () => {
-  return gulp.src('./sass/style.scss')
+  return gulp.src('./scss/style.scss')
     .pipe(plumber({errorHandler: onError}))
     // Iniciamos el trabajo con sourcemaps
     .pipe(sourcemaps.init())
@@ -35,18 +44,28 @@ gulp.task('sass', () => {
 });
 
 gulp.task('lint', () => {
-	return gulp.src('./js/dev/**.js')
+	return gulp.src('./js/**/*.js')
 		.pipe(jshint())
 });
 
-gulp.task('javascript', ['lint'], function() {
-	return gulp.src('./js/dev/**.js')
-		.pipe(babel())
+gulp.task('globaljs', ['lint'], function() {
+	return gulp.src('./js/globales/**.js')
     .pipe(plumber({ errorHandler: onError }))
     .pipe(babel({
       presets: ['@babel/env']
     }))
-		//.pipe(concat('index.js'))
+		.pipe(concat('global.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./js'))
+		.pipe(livereload())
+});
+
+gulp.task('uniquejs', ['lint'], function() {
+	return gulp.src('./js/unicos/**.js')
+    .pipe(plumber({ errorHandler: onError }))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
 		.pipe(uglify())
 		.pipe(gulp.dest('./js'))
 		.pipe(livereload())
@@ -65,12 +84,12 @@ gulp.task('imagemin', () => {
 
 gulp.task('watch', function () {
 	livereload.listen();
-	gulp.watch('./sass/**/**.scss', ['sass'])
-	gulp.watch('./js/dev/**.js', ['javascript'])
+	gulp.watch('./scss/**/**.scss', ['sass', 'cache'])
+	gulp.watch('./js/**/**.js', ['globaljs', 'uniquejs', 'cache'])
 	gulp.watch('./img/dev/**.*', ['imagemin'])
 
 });
 
-gulp.task('default', ['sass', 'javascript', 'imagemin', 'watch'], function(){
+gulp.task('default', ['sass', 'globaljs', 'uniquejs', 'imagemin', 'watch'], function(){
 
 });

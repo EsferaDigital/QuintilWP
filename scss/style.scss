@@ -5,17 +5,22 @@
 @import "config/fuentes.scss";
 @import "config/colores.scss";
 @import "config/var_generales.scss";
+@import "config/breakpoints.scss";
 
-// Layout
+// textos
 
-@import "layout/layout.scss";
-@import "layout/breakpoints.scss";
+@import "textos/titulos.scss";
+@import "textos/parrafos.scss";
 
 // Elementos
 
 @import "elements/botones.scss";
+@import "elements/tarjetas3d.scss";
 
-// Componentes
+// secciones
+
+// Paginas
+
 
 
 // Animaciones

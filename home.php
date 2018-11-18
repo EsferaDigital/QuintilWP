@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Plantilla para blog
+Template name: Plantilla para Inicio
  */
 get_header();
 printf('<section class="container-central">');
