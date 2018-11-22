@@ -1,0 +1,29 @@
+.c-header{
+  display: grid;
+  background-color: color(primary);
+  grid-template-columns: minmax(30%, 10rem) 1fr;
+  border: 1px solid red;
+}
+
+.custom-logo-link{
+  padding: .5rem;
+  display: block;
+  border: 2px solid green;
+  & img{
+    display: block;
+  }
+}
+
+.c-header-menu{
+  // background-color: greenyellow;
+  align-self: center;
+  justify-self: end;
+  margin-right: .5rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.c-nav{
+  display: none;
+  background-color: white;
+}

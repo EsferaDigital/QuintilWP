@@ -27,10 +27,23 @@ h6, small{font-size: .75rem;}
 
 // Importar Tipografía
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+// Importar Tipografía
 
-$primary-font: 'Roboto', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
+@font-face{
+  font-family: 'Sun-valley';
+  src: url(./fonts/sun_valley.eot) format('embedded-opentype'),
+       url(./fonts/sun_valley.ttf) format('truetype'),
+       url(./fonts/sun_valley.svg) format('svg'),
+       url(./fonts/sun_valley.woff) format('woff'),
+       url(./fonts/sun_valley.woff2) format('woff2');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$primary-font: 'Sun-valley', serif;
+$secondary-font: 'Lato', sans-serif;
+$menu-font: Tahoma, sans-serif;
+
 
 html {
   font-family: $primary-font;
