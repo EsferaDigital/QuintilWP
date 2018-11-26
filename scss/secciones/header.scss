@@ -1,17 +1,43 @@
 .c-header{
   display: grid;
   background-color: color(primary);
-  grid-template-columns: minmax(30%, 10rem) 1fr;
-  border: 1px solid red;
+  grid-template-columns: minmax(30%, 10rem) 1fr 2.8rem;
+  // border: 1px solid red;
 }
 
 .custom-logo-link{
   padding: .5rem;
   display: block;
-  border: 2px solid green;
+  // border: 2px solid green;
   & img{
     display: block;
   }
+}
+
+.cabecera{
+  align-self: center;
+  justify-self: end;
+  // border: 1px solid red;
+  & i{
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: .8rem;
+    &::before{
+      padding: .2rem .2rem .2rem .3rem;
+      margin: 0;
+    }
+  }
+  & .f-blanco{
+    color: color(primary);
+    background: white;
+  }
+}
+
+.textwidget{
+  display: flex;
+  // border: 1px solid red;
 }
 
 .c-header-menu{
@@ -19,11 +45,12 @@
   align-self: center;
   justify-self: end;
   margin-right: .5rem;
+  margin-top: 3px;
   font-size: 1.8rem;
   color: white;
 }
 
 .c-nav{
-  display: none;
+  // display: none;
   background-color: white;
 }

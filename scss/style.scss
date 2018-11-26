@@ -1,5 +1,7 @@
 // Configuración
 
+@import "config/personalizacion.scss";
+
 @import "config/reset.scss";
 @import "config/funciones.scss";
 @import "config/fuentes.scss";
@@ -20,6 +22,7 @@
 // secciones
 
 @import "secciones/header.scss";
+@import "secciones/footer.scss";
 
 // Paginas
 

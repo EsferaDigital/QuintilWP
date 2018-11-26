@@ -9,7 +9,7 @@ printf('<!DOCTYPE html>
 	<meta name="description" content="' . get_bloginfo('description') . '" />
   <link rel="icon" type="image/x-icon" href="' . get_bloginfo('template_url') . '/img/favicon.png"/>
   <link href="https://file.myfontastic.com/5FPdHFK8qJXu8n3sP2T9fC/icons.css" rel="stylesheet">
-	<link rel="stylesheet" href="' . get_bloginfo('stylesheet_url') . '?t=1542910041091" />');
+	<link rel="stylesheet" href="' . get_bloginfo('stylesheet_url') . '?t=1543199061899" />');
 wp_head();
 printf('
 </head>

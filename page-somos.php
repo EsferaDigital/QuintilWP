@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Plantilla para Inicio
+Template name: Plantilla para Quienes Somos
  */
 get_header();
 while (have_posts()) : the_post();

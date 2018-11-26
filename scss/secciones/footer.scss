@@ -1,0 +1,15 @@
+.c-footer{
+  background-color: color(primary);
+  text-align: center;
+  padding: 1rem;
+  // border: 1px solid red;
+  & p{
+    color: white;
+  }
+  & a{
+    color: #249EDB;
+    &:hover{
+      color: white;
+    }
+  }
+}
