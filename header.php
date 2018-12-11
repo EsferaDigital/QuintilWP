@@ -1,37 +1,37 @@
-<?php
-printf('<!DOCTYPE html>
-<html lang="' . get_bloginfo('language') . '">
+<!DOCTYPE html>
+<html <?php language_attributes();?>>
 <head>
-	<title>' . get_bloginfo('name') . '</title>
-	<meta charset="' . get_bloginfo('charset') . '" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="description" content="' . get_bloginfo('description') . '" />
-  <link rel="icon" type="image/x-icon" href="' . get_bloginfo('template_url') . '/img/favicon.png"/>
-  <link href="https://file.myfontastic.com/5FPdHFK8qJXu8n3sP2T9fC/icons.css" rel="stylesheet">
-	<link rel="stylesheet" href="' . get_bloginfo('stylesheet_url') . '?t=1543199061899" />');
-wp_head();
-printf('
+  <title><?php wp_title('|', true, 'right');?></title>
+  <meta charset="<?php bloginfo( 'charset' )?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="<?php bloginfo('description') ?>" />
+  <link rel="icon" type="image/x-icon" href="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/favicon.png')); ?>" />
+<?php wp_head();?>
 </head>
-
 <body>
-<div id="page" class="site">
-	<header id="masthead" class="c-header">
-');
-			if(has_custom_logo()){
-				the_custom_logo();
-			}else{
-				printf('<a href="http://localhost:8080/Quintil/"><img src="' . get_bloginfo('template_url') . '/img/logo-completo-b.png" alt="Logo"/></a>');
-      }
-      dynamic_sidebar('id-encabezado');
-			printf('<div class="c-header-menu icon-menu" id="toggle-menu"></div>');
-			$args = array(
-        'theme_location' => 'menu_principal',
+  <header id="mainHeader" class="Header">
+    <div class="logo">
+      <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/logo-completo-b.png')); ?>"></a>
+    </div>
+    <?php dynamic_sidebar('header-sidebar'); ?>
+    <div class="btn-menu">
+      <i class="icon-menu" id="toggleMenu"></i>
+    </div>
+  <?php
+    if(has_nav_menu('main_menu')):
+      wp_nav_menu(array(
+        'theme_location' => 'main_menu',
         'container' => 'nav',
-        'container_class' => 'c-nav',
-        'container_id' => 'main-nav'
-      );
-      wp_nav_menu($args);
-	printf('
-	</header>
-');
+        'container_class' => 'menu',
+        'container_id' => 'mainMenu'
+      ));
+    else: ?>
+    <nav class="menu" id="mainMenu">
+      <ul>
+        <?php wp_list_pages('title_li');?>
+      </ul>
+    </nav>
+  <?php endif; ?>
+  </header>
+  <main class="Main">

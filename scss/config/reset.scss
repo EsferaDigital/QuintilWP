@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body{
@@ -22,7 +22,7 @@ a{
 a:active,
 a:hover {
   outline-width: 0; }
- 
+
 li{
   margin-left: 0;
   list-style-type: inherit;
@@ -99,4 +99,4 @@ textarea{resize: none;}
 
 // Para los iconos
 
-[class^="icon-"]::before { position: relative; top: 2px; margin-right: .5em; }
+[class^="icon-"]::before { position: relative; top: 2px; margin-right: 0; }

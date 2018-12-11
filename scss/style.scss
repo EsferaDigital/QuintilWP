@@ -9,6 +9,9 @@
 @import "config/var_generales.scss";
 @import "config/breakpoints.scss";
 
+// Animaciones
+// @import "animaciones/slide.scss";
+
 // textos
 
 @import "textos/titulos.scss";
@@ -25,7 +28,9 @@
 @import "secciones/footer.scss";
 
 // Paginas
+@import "paginas/home.scss";
+@import "paginas/somos.scss";
 
 
 
-// Animaciones
+
