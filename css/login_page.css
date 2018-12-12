@@ -1,0 +1,19 @@
+body.login{
+  background-color: transparent;
+  background-image: url('../img/aprendiendo.jpg');
+  background-size: cover;
+}
+body.login div#login form#loginform p label{
+  color: white;
+}
+body.login div#login form#loginform{
+  background-color: var(--second-color);
+}
+
+body.login div#login #nav a{
+  color: white;
+}
+
+body.login div#login #backtoblog a{
+  color: white;
+}

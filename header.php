@@ -12,7 +12,12 @@
 <body>
   <header id="mainHeader" class="Header">
     <div class="logo">
-      <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/logo-completo-b.png')); ?>"></a>
+      <?php
+        if(has_custom_logo()):
+          the_custom_logo();
+        else: ?>
+          <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/logo-completo-b.png')); ?>"></a>
+        <?php endif; ?>
     </div>
     <?php dynamic_sidebar('header-sidebar'); ?>
     <div class="btn-menu">

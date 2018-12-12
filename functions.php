@@ -31,6 +31,24 @@ add_action( 'wp_enqueue_scripts', 'quintil_scripts' );
 if(!function_exists('quintil_custom')):
   function quintil_custom(){
     add_theme_support( 'post-thumbnails' );
+
+    add_theme_support('html5', array(
+      'comment-list',
+      'comment-form',
+      'search-form',
+      'gallery',
+      'caption'
+    ));
+
+    add_theme_support('custom-logo', array(
+      'height' => 100,
+      'width' => 100,
+      'flex-height' => true,
+      'flex-width' => true
+    ));
+
+    // Activa la actualización selectiva de widgets en el personalizador
+    add_theme_support('customize-selective-refresh-widgets');
   }
 endif;
 add_action('after_setup_theme', 'quintil_custom');
@@ -69,47 +87,8 @@ if(!function_exists('quintil_register_sidebars')):
 endif;
 add_action('widgets_init', 'quintil_register_sidebars');
 
+// Archivos externos
 
+require_once get_template_directory() . '/inc/custom-login.php';
 
-// function quintil_widgets_init() {
-//   register_sidebar( array(
-//     'name'          => esc_html__( 'Sidebar', 'Quintil' ),
-//     'id'            => 'sidebar-1',
-//     'description'   => esc_html__( 'Añadir widgets aquí', 'Quintil' ),
-//     'before_widget' => '<section id="%1$s" class="widget %2$s">',
-//     'after_widget'  => '</section>',
-//     'before_title'  => '<h2 class="widget-title">',
-//     'after_title'   => '</h2>',
-//   ) );
-//   register_sidebar( array(
-//     'name' => 'Encabezado',
-//     'id' => 'id-encabezado',
-//     'description' => 'Posición de encabezado para redes sociales',
-//     'before_widget' => '<section class="cabecera">',
-//     'after_widget' => '</section>',
-//   ));
-// }
-// add_action( 'widgets_init', 'quintil_widgets_init' );
-
-// // Función para enviar mail
-// function send_mail_data(){
-//   $name = sanitize_text_field($_POST['name']);
-//   $email = sanitize_email($_POST['email']);
-//   $message = sanitize_textarea_field($_POST['message']);
-
-//   $adminmail = "destino@dominio.com"; //email destino
-//   $subject = "Formulario de contacto"; // asunto
-//   $headers = "Responder a: " . $name . " <" . $email . ">";
-
-//   // Cuerpo del mensaje
-//   $msg = "Nombre: " . $name . "\n";
-//   $msg .= "E-mail: " . $email . "\n\n";
-//   $msg .= "Mensaje: \n\n" . $message . "\n";
-
-//   $sendmail = wp_mail( $adminmail, $subject, $msg, $headers);
-
-//   wp_redirect( 'http://localhost:8080/Quintil/contactanos/?sent='.$sendmail);
-// }
-
-// add_action( 'admin_post_nopriv_process_form', 'send_mail_data' );
-// add_action( 'admin_post_process_form', 'send_mail_data' );
+require_once get_template_directory() . '/inc/custom-contact-form.php';
