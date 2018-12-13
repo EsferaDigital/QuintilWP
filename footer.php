@@ -1,5 +1,4 @@
-  </main>
-  <footer class="c-footer">
+<footer class="c-footer">
     <?php
       wp_nav_menu(array(
         'theme_location' => 'social_menu',
@@ -14,5 +13,3 @@
 <?php wp_footer(); ?>
 </body>
 </html>
-
-<figure class=""

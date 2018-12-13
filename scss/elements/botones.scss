@@ -45,12 +45,12 @@
 }
 
 // Mixin básico, si lleva valores, los predeterminados van al final
-@mixin btn($color, $fs, $bgc, $display:inline-block){
+@mixin btn($color, $fs, $display:inline-block){
   display: $display;
   font-size: $fs;
   padding: 1rem;
   color: $color;
-  background-color: $bgc;
+  background-color: color(cta);
   &:hover{
 		background-color: darken($color,5);
 	}
@@ -63,5 +63,33 @@
   @include btn(color(cta),1rem, color(primary));
   &-small{
     @include btn(color(cta), 1rem, color(primary));
+  }
+}
+
+.btn{
+  @include btn(white, 1rem);
+  background: $degradado;
+  max-width: 5rem;
+  margin: auto;
+  &-enviar{
+    @include btn(white, 1rem);
+    background: $degradado;
+    text-transform: uppercase;
+    color: white;
+    max-width: 6rem;
+    margin: auto;
+    border-radius: 5px;
+    padding: .5rem;
+    border: none;
+    cursor: pointer;
+    @include mq(md){
+      font-size: 1.1rem;
+    }
+    &:hover{
+      opacity: .8;
+    }
+    &:active{
+      transform: scale(.95);
+    }
   }
 }

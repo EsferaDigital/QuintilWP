@@ -1,0 +1,1 @@
+"use strict";!function(o,e,n){e("Hello Quienes Somos Wordpress")}(document,console.log,jQuery.noConflict());

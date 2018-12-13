@@ -2,17 +2,45 @@
   background-color: color(primary);
   position: relative;
   display: grid;
-  grid-template-columns: 40% 1fr 15%;
+  grid-template-columns: 40% 1fr minmax(min-content, max-content);
+  @include mq(md){
+    padding: 0 2.5%;
+  }
+  @include mq(lgm){
+    grid-template-columns: 20% 1fr minmax(min-content, max-content) minmax(min-content, max-content) ;
+    grid-template-areas:
+                  "logo . menu sociales";
+  }
 }
 
 .logo{
   padding: .5rem;
+  @include mq(lgm){
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+  }
+  & a img{
+    @include mq(md){
+      width: 60%;
+    }
+    @include mq(lgm){
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }
 
 .header-sociales{
   align-self: center;
   justify-self: end;
   padding-right: .5rem;
+  @include mq(md){
+    padding-right: 1rem;
+  }
+  @include mq(lgm){
+    grid-area: sociales;
+  }
 }
 
 .custom-html-widget{
@@ -21,6 +49,12 @@
     font-size: 1rem;
     border: 1px solid white;
     border-radius: 50%;
+    @include mq(md){
+      margin-left: .5rem;
+    }
+    @include mq(lgs){
+      font-size: 1.3rem;
+    }
     &::before{
       padding: 3px;
     }
@@ -41,8 +75,14 @@
 
 .btn-menu{
   align-self: center;
-  justify-self: start;
-  // border: 1px solid red;
+  justify-self: center;
+  padding-right: .5rem;
+  @include mq(md){
+    padding: 0;
+  }
+  @include mq(lgm){
+    display: none;
+  }
 }
 
 #mainMenu{
@@ -54,18 +94,62 @@
   z-index: 1;
   top: 100%;
   transition: all .5s;
+  @include mq(lgm){
+    position: static;
+    height: 100%;
+    max-height: 7rem;
+    grid-area: menu;
+    background-color: color(primary);
+    // border: 1px solid orange;
+    align-self: center;
+    justify-self: center;
+  }
   & .menu-item{
     width: 90%;
     margin: auto;
     padding: .5rem 0;
     border-bottom: 1px solid color(primary);
+    @include mq(lgm){
+      border-bottom: none;
+      padding: 0;
+      width: auto;
+      margin: 0;
+      // border: 1px solid red;
+      flex: auto;
+      line-height: 6rem;
+    }
     & a{
+      display: flex;
+      width: 100%;
+      text-align: center;
+      height: 6rem;
+      padding: 0 1rem;
+      font-family: $menu-font;
       color: inherit;
       text-transform: uppercase;
+      @include mq(lgm){
+        color: white;
+      }
+      &:hover{
+        background-color: white;
+        @include mq(lgm){
+          color: color(primary);
+        }
+      }
     }
   }
   & .menu-item:last-child{
     padding-bottom: 3rem;
+    @include mq(lgm){
+      padding: 0;
+    }
+  }
+}
+
+#menu-menu-principal{
+  @include mq(lgm){
+    height: 100%;
+    display: flex;
   }
 }
 
@@ -79,8 +163,4 @@
 .show-menu{
   max-height: 1000px !important;
   overflow: visible !important;
-}
-
-.Main{
-  background-color: color(bg);
 }
