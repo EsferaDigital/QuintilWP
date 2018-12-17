@@ -132,6 +132,7 @@
       }
       &:hover{
         background-color: white;
+        font-family: $menu-font;
         @include mq(lgm){
           color: color(primary);
         }
