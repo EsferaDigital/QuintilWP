@@ -44,7 +44,7 @@ Template name: Plantilla para Inicio
           <p class="card-rotate-description">
             Asistimos la incorporación de técnicas de gestión de la innovación y manejamos portafolios de innovación empresarial.
           </p>
-          <a href="#Empresa" class="btn-mas">Ver más</a>
+          <a href="#Empresa">Ver más</a>
         </figcaption>
       </figure>
     </div>
@@ -65,7 +65,7 @@ Template name: Plantilla para Inicio
           <p class="card-rotate-description">
             Estamos en sintonía con la vanguardia de las nuevas técnicas y metodologías en gestión de la Innovación.
           </p>
-          <a href="#Innovacion" class="btn-mas">Ver más</a>
+          <a href="#Innovacion">Ver más</a>
         </figcaption>
       </figure>
     </div>

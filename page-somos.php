@@ -6,10 +6,10 @@ Template name: Plantilla para Somos
 <?php get_header(); ?>
 <main class="Main-somos">
   <section class="c-somos">
-    <div>
+    <div class="c-somos-img">
       <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/equipo.jpg')); ?>">
     </div>
-    <div>
+    <div class="c-somos-article">
       <h2>Quienes Somos</h2>
       <div>
         <p>Somos una empresa consultora que convoca a un equipo multidisciplinario y diverso, para atender de la mejor manera cada uno de sus desafíos.</p>

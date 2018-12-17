@@ -15,7 +15,7 @@
   }
   & img{
     display: block;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
 }
 
@@ -124,7 +124,7 @@
     & input, textarea{
       flex: 90%;
       padding-left: .5rem;
-      outline: none;
+      outline-color: color(success);
       border: none;
       @include mq(md){
         font-size: 1.1rem;

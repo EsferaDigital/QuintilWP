@@ -49,6 +49,11 @@
     font-size: 1rem;
     border: 1px solid white;
     border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .3s;
+    &:hover{
+      opacity: .8;
+    }
     @include mq(md){
       margin-left: .5rem;
     }
@@ -122,17 +127,18 @@
       display: flex;
       width: 100%;
       text-align: center;
-      height: 6rem;
       padding: 0 1rem;
       font-family: $menu-font;
       color: inherit;
       text-transform: uppercase;
+      transition: all .3s;
       @include mq(lgm){
         color: white;
+        height: 6rem;
+        font-size: 1.3rem;
       }
       &:hover{
         background-color: white;
-        font-family: $menu-font;
         @include mq(lgm){
           color: color(primary);
         }
