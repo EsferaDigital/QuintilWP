@@ -1,4 +1,1 @@
-;
-((d,c,$) =>{
-  c('Hello Contacto Wordpress')
-})(document, console.log, jQuery.noConflict());
+"use strict";var formulario=document.getElementById("formulario"),body=document.getElementById("body");console.log("carga este script");var numero=30;function validar(e){e.preventDefault(),console.log("funciona")}formulario.addEventListener("submit",validar);

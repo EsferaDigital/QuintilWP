@@ -1,15 +1,32 @@
 .c-footer{
   background-color: color(primary);
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0 .5rem;
   // border: 1px solid red;
   & p{
     color: white;
+    padding-bottom: 1rem;
   }
   & a{
-    color: #249EDB;
+    color: white;
     &:hover{
-      color: white;
+      color: color(secondary);
     }
   }
+  & small{
+    color: white;
+    font-size: .9rem;
+  }
+  &-sociales{
+    padding: 1rem;
+    & a{
+      font-size: 2rem;
+      margin: .5rem;
+    }
+  }
+}
+
+.autor{
+  display: flex;
+  border: 1px solid red;
 }

@@ -1,13 +1,14 @@
 body.login{
   background-color: transparent;
-  background-image: url('../img/aprendiendo.jpg');
+  background-image: url('../img/fondo_contacto.jpg');
   background-size: cover;
+  background-position: center center;
 }
 body.login div#login form#loginform p label{
   color: white;
 }
 body.login div#login form#loginform{
-  background-color: var(--second-color);
+  background-color: #2D4B4F;
 }
 
 body.login div#login #nav a{
@@ -16,4 +17,17 @@ body.login div#login #nav a{
 
 body.login div#login #backtoblog a{
   color: white;
+}
+
+#wp-submit{
+  background: linear-gradient(to right, rgb(71, 163, 103), rgb(57, 162, 155));
+  border: transparent;
+  margin-bottom: 0;
+  transition: opacity .3s;
+  text-transform: uppercase;
+  color: white;
+}
+
+#wp-submit:hover{
+  opacity: .8;
 }

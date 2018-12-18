@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/favicon.png')); ?>" />
 <?php wp_head();?>
 </head>
-<body>
+<body id="body">
   <header id="mainHeader" class="Header">
     <div class="logo">
       <?php
