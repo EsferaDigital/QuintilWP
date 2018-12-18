@@ -136,3 +136,99 @@
     margin: 1rem auto 0;
   }
 }
+
+.modal-php-false, .modal-php-true{
+  position: relative;
+  top: -50rem;
+  font-size: 1.5rem;
+  // border: 1px solid red;
+  left: 25%;
+  width: 50%;
+  height: 3rem;
+  line-height: 3rem;
+  background: $degradadot;
+}
+
+.modal-php-false::before{
+  content: "\02718";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: .5rem;
+  color: color(alert);
+}
+
+.modal-php-true::before{
+  content: "\2713";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: .5rem;
+  color: color(success);
+}
+
+// Modal errores
+
+.modal-errores{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	&-content{
+		width: 95%;
+		max-width: 400px;
+		margin: auto;
+		padding: 1rem;
+		background-color: white;
+		box-shadow: 0 0 15px rgba(0,0,0,0.5);
+		& h3{
+			text-align: center;
+			letter-spacing: 2px;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			&::after{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: #C5C5C5;
+				margin: 10px 0 15px;
+			}
+		}
+		& p{
+			color: #606060;
+			letter-spacing: 2px;
+			&::before{
+				content: "\02718";
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				margin-right: .5rem;
+				color: color(alert);
+			}
+		}
+	}
+}
+
+#btnClose{
+  float: right;
+  padding: .5rem 1rem;
+  color: white;
+  background: $degradado;
+  cursor: pointer;
+  border-radius: 5px;
+  // border: 1px solid red;
+  &:hover{
+    opacity: .8;
+  }
+  &:active{
+    transform: scale(.95);
+  }
+}

@@ -16,13 +16,13 @@ Template name: Plantilla para Contacto
     <?php
       if ( isset($_GET['sent']) ){
         if ( $_GET['sent'] == '1'){
-          echo "<p> ✔ Formulario enviado correctamente</p><br>";
+          echo "<p class='modal-php-true'>Formulario enviado correctamente</p><br>";
         }else {
-          echo "<p> Hubo un error al enviar</p><br>";
+          echo "<p class='modal-php-false'> Hubo un error al enviar</p><br>";
         }
       }
     ?>
-    <form method="post" action="<?php echo admin_url( 'admin-post.php' ) ?>" class="ContactForm" >
+    <form method="post" action="<?php echo admin_url( 'admin-post.php' ) ?>" class="ContactForm" name="formulario">
       <div class="ContactForm-item">
         <i class="icon-user"></i>
         <input type="text" name="name" id="Name"placeholder="Nombre Apellido" required>
@@ -45,7 +45,7 @@ Template name: Plantilla para Contacto
       </div>
       <div class="ContactForm-item">
         <input type="hidden" name="action" value="process_form">
-        <input type="submit" name="submit" class="btn-enviar" value="Enviar">
+        <input type="submit" name="submit" id="enviar" class="btn-enviar" value="Enviar">
       </div>
     </form>
   </section>
