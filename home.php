@@ -23,7 +23,7 @@ Template name: Plantilla para Inicio
           <p class="card-rotate-description">
             Diseñamos y ejecutamos programas que aceleran ecosistemas de emprendimiento e innovación.
           </p>
-          <a href="#Ecosistema">Ver más</a>
+          <a class="verMas" href="#Ecosistema">Ver más</a>
         </figcaption>
       </figure>
     </div>
@@ -44,7 +44,7 @@ Template name: Plantilla para Inicio
           <p class="card-rotate-description">
             Asistimos la incorporación de técnicas de gestión de la innovación y manejamos portafolios de innovación empresarial.
           </p>
-          <a href="#Empresa">Ver más</a>
+          <a class="verMas" href="#Empresa">Ver más</a>
         </figcaption>
       </figure>
     </div>
@@ -65,7 +65,7 @@ Template name: Plantilla para Inicio
           <p class="card-rotate-description">
             Estamos en sintonía con la vanguardia de las nuevas técnicas y metodologías en gestión de la Innovación.
           </p>
-          <a href="#Innovacion">Ver más</a>
+          <a class="verMas" href="#Innovacion">Ver más</a>
         </figcaption>
       </figure>
     </div>

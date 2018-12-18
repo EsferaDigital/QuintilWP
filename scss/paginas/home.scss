@@ -172,7 +172,11 @@
 .hacemos{
   width: 100%;
   height: 100%;
+  margin-top: 1rem;
   // border: 3px solid red;
+  @include mq(lgm){
+    margin-top: 2rem;
+  }
 }
 
 .c-content-hacemos{

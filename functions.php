@@ -17,7 +17,7 @@ if(!function_exists('quintil_scripts')):
     $scripts = get_template_directory_uri() . '/js/global.min.js';
 
     if(is_front_page()):
-      wp_register_script('homescript', get_template_directory_uri() . '/js/modal.js', array(), '1.0.0', true);
+      wp_register_script('homescript', get_template_directory_uri() . '/js/home.js', array(), '1.0.0', true);
       wp_enqueue_script('homescript');
     endif;
 
