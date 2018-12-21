@@ -1,0 +1,33 @@
+// Configuración
+
+@import "../scss/config/personalizacion";
+
+@import "../scss/config/reset";
+@import "../scss/config/funciones";
+@import "../scss/config/fuentes";
+@import "../scss/config/colores";
+@import "../scss/config/var_generales";
+@import "../scss/config/breakpoints";
+
+// Animaciones
+// @import "../scss/animaciones/slide";
+
+// textos
+
+@import "../scss/textos/titulos";
+@import "../scss/textos/parrafos";
+
+// Elementos
+
+@import "../scss/elements/botones";
+@import "../scss/elements/tarjetas3d";
+
+// secciones
+
+@import "../scss/secciones/header";
+@import "../scss/secciones/footer";
+
+// Paginas
+@import "../scss/paginas/home";
+@import "../scss/paginas/somos";
+@import "../scss/paginas/contacto";
