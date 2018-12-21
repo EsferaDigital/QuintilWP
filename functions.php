@@ -10,6 +10,11 @@
 *@version 1.0.0
 */
 
+//Establece el ancho máximo permitido para cualquier contenido en el temz, como video o imagenes.
+if(!isset($content_width)){
+  $content_width = 800;
+}
+
 if(!function_exists('quintil_scripts')):
   function quintil_scripts() {
     $icons = get_template_directory_uri() . '/css/icons.css';
@@ -62,6 +67,28 @@ if(!function_exists('quintil_custom')):
       'flex-width' => true
     ));
 
+    //Añade opciones de formato a las entradas
+    add_theme_support('post-formats', array(
+      'aside',
+      'gallery',
+      'link',
+      'image',
+      'quote',
+      'status',
+      'video',
+      'audio',
+      'chat'
+    ));
+
+    //Permite que los themes y plugins administren el titulo. Al usarlo no debemos poner el title en el header.php
+    add_theme_support('title-tag');
+
+    //Activar Feeds RSS
+    add_theme_support('automatic-feed-links');
+
+    //Oculta version con la que se hizo este tema
+    remove_action('wp_head', 'wp_generator');
+
     // Activa la actualización selectiva de widgets en el personalizador
     add_theme_support('customize-selective-refresh-widgets');
   }
@@ -85,10 +112,10 @@ if(!function_exists('quintil_register_sidebars')):
       'name' => __('Sidebar Principal', 'qtl'),
       'id' => 'main-sidebar',
       'description' => __('Añadir widgets aquí', 'qtl'),
-      'before_widget' => '<article id="%1$s" class="widget %2$s">',
+      'before_widget' => '<article id="%1$s" class="Widget %2$s">',
       'after_widget' => '</article>',
-      'before_title' => '<h2 class="widget-title">',
-      'after_title' => '</h2>'
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>'
     ));
 
     register_sidebar(array(
