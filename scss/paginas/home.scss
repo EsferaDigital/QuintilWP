@@ -30,12 +30,6 @@
     width: 100%;
     margin: 0;
   }
-  &:hover figure{
-    transform: perspective(600px) rotateY(0deg);
-    @include mq(md){
-      transform: perspective(600px) rotateY(180deg);
-    }
-  }
   &:hover figure .delantera .delantera-text{
     display: none;
   }
@@ -100,14 +94,13 @@
           height: 25%;
         }
       }
-      & a{
+      & p{
         width: 100%;
         text-transform: uppercase;
         text-align: center;
         position: relative;
         font-size: .9rem;
         display: block;
-        cursor: pointer;
         color: white;
         @include mq(smH){
           font-size: .8rem;
@@ -126,6 +119,13 @@
       }
     }
   }
+}
+
+.card-rotate:hover figure{
+  // transform: perspective(600px) rotateY(0deg);
+    @include mq(md){
+      transform: perspective(600px) rotateY(180deg);
+    }
 }
 
 .card-rotate-title{
@@ -242,7 +242,7 @@
     }
   }
   &-parrafos p{
-    padding: .5rem 0;
+    padding: .5rem;
     color: color(text);
     font-size: 1.3rem;
     @include mq(md){

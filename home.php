@@ -11,20 +11,22 @@ Template name: Plantilla para Inicio
         <div class="delantera">
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos1.jpg')); ?>" >
           <div class="delantera-text">
-            <h2>Ecosistema</h2>
+            <h2>Ecosistemas</h2>
             <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
           </div>
         </div>
-        <figcaption class="trasera">
-          <h2 class="card-rotate-title">
-            Ecosistema
-          </h2>
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
-          <p class="card-rotate-description">
-            Diseñamos y ejecutamos programas que aceleran ecosistemas de emprendimiento e innovación.
-          </p>
-          <a class="verMas" href="#Ecosistema">Ver más</a>
-        </figcaption>
+        <a class="verMas" href="#Ecosistema">
+          <figcaption class="trasera">
+            <h2 class="card-rotate-title">
+              Ecosistemas
+            </h2>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
+            <p class="card-rotate-description">
+              Diseñamos y ejecutamos programas que aceleran ecosistemas de emprendimiento e innovación.
+            </p>
+            <p>Ver más</p>
+          </figcaption>
+        </a>
       </figure>
     </div>
     <div class="card-rotate">
@@ -32,20 +34,22 @@ Template name: Plantilla para Inicio
         <div class="delantera">
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos2.jpg')); ?>" >
           <div class="delantera-text">
-            <h2>Empresa</h2>
+            <h2>Empresas</h2>
             <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
           </div>
         </div>
-        <figcaption class="trasera">
-          <h2 class="card-rotate-title">
-            Empresa
-          </h2>
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
-          <p class="card-rotate-description">
-            Asistimos la incorporación de técnicas de gestión de la innovación y manejamos portafolios de innovación empresarial.
-          </p>
-          <a class="verMas" href="#Empresa">Ver más</a>
-        </figcaption>
+        <a class="verMas" href="#Empresa">
+          <figcaption class="trasera">
+            <h2 class="card-rotate-title">
+              Empresas
+            </h2>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
+            <p class="card-rotate-description">
+              Asistimos la incorporación de técnicas de gestión de la innovación y manejamos portafolios de innovación empresarial.
+            </p>
+            <p>Ver más</p>
+          </figcaption>
+        </a>
       </figure>
     </div>
     <div class="card-rotate">
@@ -57,16 +61,18 @@ Template name: Plantilla para Inicio
             <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
           </div>
         </div>
-        <figcaption class="trasera">
-          <h2 class="card-rotate-title">
-            Innovacion abierta
-          </h2>
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
-          <p class="card-rotate-description">
-            Estamos en sintonía con la vanguardia de las nuevas técnicas y metodologías en gestión de la Innovación.
-          </p>
-          <a class="verMas" href="#Innovacion">Ver más</a>
-        </figcaption>
+        <a class="verMas" href="#Innovacion">
+          <figcaption class="trasera">
+            <h2 class="card-rotate-title">
+              Innovacion abierta
+            </h2>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
+            <p class="card-rotate-description">
+              Estamos en sintonía con la vanguardia de las nuevas técnicas y metodologías en gestión de la Innovación.
+            </p>
+            <p>Ver más</p>
+          </figcaption>
+        </a>
       </figure>
     </div>
   </div>

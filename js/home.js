@@ -10,7 +10,7 @@
 
     $('html, body').animate({
       //para separarlo un poco del top le puse (coordSection - 60)
-      scrollTop: (coordSection - 30)
+      scrollTop: (coordSection - 20)
     }, 1000)
   }
 
