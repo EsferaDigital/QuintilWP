@@ -1,0 +1,32 @@
+.Header{
+  background-color: white;
+}
+
+.btn-menu{
+  color: #2D4B4F;
+  cursor: pointer;
+}
+
+.custom-html-widget a{
+  color: white;
+  background-color: #2D4B4F;
+  border: 1px solid #2D4B4F;
+}
+
+.custom-html-widget i{
+  color: #2D4B4F;
+  border: 1px solid #2D4B4F;
+}
+
+@media (min-width:1024px){
+  #mainMenu .menu-item a{
+    color: #2D4B4F;
+    background-color: white;
+    transition: all .3s;
+  }
+
+  #mainMenu .menu-item a:hover{
+    color: white;
+    background-color: #2D4B4F;
+  }
+}

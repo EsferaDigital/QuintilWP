@@ -10,6 +10,11 @@
 </head>
 <body id="body">
   <header id="mainHeader" class="Header">
+  <?php if(is_front_page()): ?>
+    <div class="logo">
+      <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/logo-completo.png')); ?>"></a>
+    </div>
+  <?php else: ?>
     <div class="logo">
       <?php
         if(has_custom_logo()):
@@ -18,6 +23,7 @@
           <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/logo-completo-b.png')); ?>"></a>
         <?php endif; ?>
     </div>
+  <?php endif; ?>
     <?php dynamic_sidebar('header-sidebar'); ?>
     <div class="btn-menu">
       <i class="icon-menu" id="toggleMenu"></i>

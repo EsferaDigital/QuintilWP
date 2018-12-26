@@ -21,27 +21,33 @@ if(!function_exists('quintil_scripts')):
     $style = get_stylesheet_uri();
     $scripts = get_template_directory_uri() . '/js/global.min.js';
 
+    wp_register_style('icons', $icons, array(), '1.0.0', 'all' );
+    wp_register_style('style', $style, array(), '1.0.0', 'all' );
+    wp_register_script('scripts', $scripts, array('jquery'), '1.0.0', true);
+
     if(is_front_page()):
+      wp_register_style('homestyle', get_template_directory_uri() . '/css/home.css', array(), '1.0.0', 'all');
       wp_register_script('homescript', get_template_directory_uri() . '/js/home.js', array(), '1.0.0', true);
+
+      wp_enqueue_style('style');
+      wp_enqueue_style('homestyle');
       wp_enqueue_script('homescript');
     endif;
 
     if(is_page('contactanos')):
       wp_register_script('contact-script', get_template_directory_uri() . '/js/contact_form.js', array(), '1.0.0', true);
+
+      wp_enqueue_style('style');
       wp_enqueue_script('contact-script');
     endif;
 
     if(is_page('quienes-somos')):
       wp_register_script('somos-script', get_template_directory_uri() . '/js/somos_script.js', array(), '1.0.0', true);
+
+      wp_enqueue_style('style');
       wp_enqueue_script('somos-script');
     endif;
-
-    wp_register_style('icons', $icons, array(), '1.0.0', 'all' );
-    wp_register_style('style', $style, array(), '1.0.0', 'all' );
-    wp_register_script('scripts', $scripts, array('jquery'), '1.0.0', true);
-
     wp_enqueue_style('icons');
-    wp_enqueue_style('style');
     wp_enqueue_script('jquery');
     wp_enqueue_script('scripts');
   }
@@ -153,11 +159,11 @@ function send_mail_data() {
 	$headers = "Reply-to: " . $name . " <" . $email . ">";
 
 	//Cuerpo del mensaje
-  $msg = 'Nombre: ' . $name . '\n';
-  $msg .= 'Empresa: ' . $company . '\n\n';
-  $msg .= 'E-mail: ' . $email . '\n\n';
-  $msg .= 'Telefono: ' . $phone . '\n\n';
-	$msg .= 'Mensaje: \n\n' . $message . '\n';
+  $msg = "Nombre: $name \n";
+  $msg .= "Empresa: $company \n";
+  $msg .= "E-mail: $email \n";
+  $msg .= "Telefono: $phone \n";
+	$msg .= "Mensaje: $message \n";
 
 	$sendmail = wp_mail( $adminmail, $subject, $msg, $headers);
 

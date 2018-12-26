@@ -130,7 +130,7 @@
       text-align: center;
       padding: 0 1rem;
       font-family: $menu-font;
-      color: inherit;
+      color: color(primary);
       text-transform: uppercase;
       transition: all .3s;
       @include mq(lgm){
