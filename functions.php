@@ -20,10 +20,13 @@ if(!function_exists('quintil_scripts')):
     $icons = get_template_directory_uri() . '/css/icons.css';
     $style = get_stylesheet_uri();
     $scripts = get_template_directory_uri() . '/js/global.min.js';
+    $Jquery = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
 
     wp_register_style('icons', $icons, array(), '1.0.0', 'all' );
     wp_register_style('style', $style, array(), '1.0.0', 'all' );
-    wp_register_script('scripts', $scripts, array('jquery'), '1.0.0', true);
+
+    wp_register_script('Jquery', $Jquery, array(), '1.0.0', true);
+    wp_register_script('scripts', $scripts, array('Jquery'), '1.0.0', true);
 
     if(is_front_page()):
       wp_register_style('homestyle', get_template_directory_uri() . '/css/home.css', array(), '1.0.0', 'all');
@@ -31,13 +34,23 @@ if(!function_exists('quintil_scripts')):
 
       wp_enqueue_style('style');
       wp_enqueue_style('homestyle');
+      wp_enqueue_script('Jquery');
       wp_enqueue_script('homescript');
+    endif;
+
+    if(is_page('inicio')):
+      wp_register_script('inicioscript', get_template_directory_uri() . '/js/inicio.js', array(), '1.0.0', true);
+
+      wp_enqueue_style('style');
+      wp_enqueue_script('Jquery');
+      wp_enqueue_script('inicioscript');
     endif;
 
     if(is_page('contactanos')):
       wp_register_script('contact-script', get_template_directory_uri() . '/js/contact_form.js', array(), '1.0.0', true);
 
       wp_enqueue_style('style');
+      wp_enqueue_script('Jquery');
       wp_enqueue_script('contact-script');
     endif;
 
@@ -45,10 +58,10 @@ if(!function_exists('quintil_scripts')):
       wp_register_script('somos-script', get_template_directory_uri() . '/js/somos_script.js', array(), '1.0.0', true);
 
       wp_enqueue_style('style');
+      wp_enqueue_script('Jquery');
       wp_enqueue_script('somos-script');
     endif;
     wp_enqueue_style('icons');
-    wp_enqueue_script('jquery');
     wp_enqueue_script('scripts');
   }
 endif;

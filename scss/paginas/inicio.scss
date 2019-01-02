@@ -1,0 +1,55 @@
+.c-inicio{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.Slider{
+  display: flex;
+  width: 500%;
+  &-item{
+    width: 100%;
+    position: relative;
+    & p{
+      color: white;
+      font-family: $secondary-font;
+      font-size: 4rem;
+      position: absolute;
+      top: calc(50% - 4rem);
+      width: 100%;
+      text-align: center;
+      border: 1px solid red;
+    }
+  }
+}
+
+.prev, .next{
+  position: absolute;
+  top: calc(50% + 3rem);
+  color: white;
+  padding: 10px;
+  border: 1px solid green;
+  cursor: pointer;
+
+}
+
+.next{
+  right: 0;
+}
+
+.Slider > section{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.item1{background-image: img('innovacion.jpg');}
+.item2{background-image: img('ideas.jpg');}
+.item3{background-image: img('desafios.jpg');}
+.item4{background-image: img('soluciones.jpg');}
+.item5{background-image: img('aprendizaje.jpg');}
+
+

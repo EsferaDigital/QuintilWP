@@ -29,7 +29,7 @@
   // Funcion para obtener imagenes
 
   @function img($img) {
-    @return url('/img/' + $img);
+    @return url('../../../../Quintil/wp-content/themes/quintil/img/' + $img);
   }
 
   // Convertir px a em

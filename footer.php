@@ -11,6 +11,7 @@
       <a href="https://esferadigital.cl" target="_blank">Esfera Digital</a>
     </div>
   </div>
+  <div id="up" class="icon-up"></div>
   </footer>
 <?php wp_footer(); ?>
 </body>

@@ -94,8 +94,8 @@ Template name: Plantilla para Inicio
         </div>
         <div class="c-content-hacemos-article-img">
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/desafios.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/flor.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendiendo.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/soluciones.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendizaje.jpg')); ?>">
         </div>
       </article>
     </section>
@@ -117,8 +117,8 @@ Template name: Plantilla para Inicio
         </div>
         <div class="c-content-hacemos-article-img">
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/desafios.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/flor.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendiendo.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/soluciones.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendizaje.jpg')); ?>">
         </div>
       </article>
     </section>
@@ -142,8 +142,8 @@ Template name: Plantilla para Inicio
         </div>
         <div class="c-content-hacemos-article-img">
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/desafios.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/flor.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendiendo.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/soluciones.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendizaje.jpg')); ?>">
         </div>
       </article>
     </section>
