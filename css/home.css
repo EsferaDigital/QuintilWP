@@ -30,3 +30,9 @@
     background-color: #2D4B4F;
   }
 }
+
+
+#phoneSpan, #mailSpan{
+  background-color: white !important;
+  color: #2D4B4F;
+}

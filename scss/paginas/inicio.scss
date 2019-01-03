@@ -1,8 +1,9 @@
-.c-inicio{
-  position: relative;
+.content-inicio{
   width: 100%;
+  height: 100%;
   margin: auto;
   overflow: hidden;
+  // border: 2px solid red;
 }
 
 .Slider{
@@ -18,20 +19,55 @@
       position: absolute;
       top: calc(50% - 4rem);
       width: 100%;
+      padding: 0 5%;
       text-align: center;
-      border: 1px solid red;
+      // border: 1px solid red;
+      @include mq(smm){
+        padding: 0 7%;
+      }
+      @include mq(mdl){
+        font-size: 6rem;
+        top: calc(50% - 5rem);
+      }
     }
+  }
+}
+
+.item4 p, .item5 p{
+  top: calc(50% - 7rem);
+  @include mq(smH){
+    top: calc(50% - 4rem);
+  }
+  @include mq(md){
+    top: calc(50% - 4rem);
+  }
+  @include mq(mdl){
+    top: calc(50% - 4.5rem);
   }
 }
 
 .prev, .next{
   position: absolute;
-  top: calc(50% + 3rem);
+  top: calc(50% + 2rem);
   color: white;
   padding: 10px;
-  border: 1px solid green;
   cursor: pointer;
-
+  &:hover{
+    color: color(secondary);
+  }
+  @include mq(smH){
+    top: calc(50% + 3.5rem);
+  }
+  @include mq(md){
+    top: calc(50% + 2.5rem);
+  }
+  @include mq(mdl){
+    font-size: 2rem;
+    top: calc(50% + 3rem);
+  }
+  @include mq(lgs){
+    top: calc(50% + 4rem);
+  }
 }
 
 .next{

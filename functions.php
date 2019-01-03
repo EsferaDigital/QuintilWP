@@ -30,20 +30,23 @@ if(!function_exists('quintil_scripts')):
 
     if(is_front_page()):
       wp_register_style('homestyle', get_template_directory_uri() . '/css/home.css', array(), '1.0.0', 'all');
-      wp_register_script('homescript', get_template_directory_uri() . '/js/home.js', array(), '1.0.0', true);
+      wp_register_script('inicioscript', get_template_directory_uri() . '/js/inicio.js', array(), '1.0.0', true);
+
 
       wp_enqueue_style('style');
       wp_enqueue_style('homestyle');
       wp_enqueue_script('Jquery');
-      wp_enqueue_script('homescript');
+      wp_enqueue_script('inicioscript');
     endif;
 
-    if(is_page('inicio')):
-      wp_register_script('inicioscript', get_template_directory_uri() . '/js/inicio.js', array(), '1.0.0', true);
+    if(is_page('que-hacemos')):
+      wp_register_script('homescript', get_template_directory_uri() . '/js/home.js', array(), '1.0.0', true);
+
 
       wp_enqueue_style('style');
       wp_enqueue_script('Jquery');
-      wp_enqueue_script('inicioscript');
+      wp_enqueue_script('homescript');
+
     endif;
 
     if(is_page('contactanos')):

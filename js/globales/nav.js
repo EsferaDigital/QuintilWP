@@ -11,6 +11,15 @@ function showHide(){
 
 btnMenu.addEventListener('click', showHide);
 
+function efectos(){
+  jQuery('#up').on('click', function(){
+    jQuery('html, body').animate({
+      scrollTop: 0,
+      scrollLeft: 0
+    }, 1000)
+  })
+}
+
 function showUp() {
 	var scrollVertical = Jquery(window).scrollTop(),
 		scrollHorizontal = jQuery(window).scrollLeft()
@@ -19,4 +28,5 @@ function showUp() {
 	return (scrollVertical > 700) ? jQuery('#up').fadeIn() : jQuery('#up').fadeOut()
 }
 
+jQuery(document).ready(efectos)
 jQuery(window).on('scroll', showUp)
