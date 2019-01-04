@@ -17,34 +17,57 @@
       font-family: $secondary-font;
       font-size: 4rem;
       position: absolute;
-      top: calc(50% - 4rem);
-      width: 100%;
-      padding: 0 5%;
+      top: 1.5rem;
+      left: 1.5rem;
       text-align: center;
       // border: 1px solid red;
+      @include mq(smH){
+        left: 2.5rem;
+      }
       @include mq(smm){
         padding: 0 7%;
       }
       @include mq(mdl){
         font-size: 6rem;
-        top: calc(50% - 5rem);
+        left: 3rem;
+      }
+      @include mq(lgs){
+        font-size: 8rem;
       }
     }
   }
 }
 
 .item4 p, .item5 p{
-  top: calc(50% - 7rem);
-  @include mq(smH){
-    top: calc(50% - 4rem);
-  }
-  @include mq(md){
-    top: calc(50% - 4rem);
-  }
+  top: 1.5rem;
+  left: 3rem;
   @include mq(mdl){
-    top: calc(50% - 4.5rem);
+    left: 5rem;
   }
 }
+
+.item4 p:nth-child(2), .item5 p:nth-child(2){
+  // border: 3px solid green;
+  top: 5rem;
+  left: 1.5rem;
+  @include mq(smH){
+    left: 2.5rem;
+  }
+  @include mq(mdl){
+    top: 7rem;
+    left: 3rem;
+  }
+  @include mq(lgs){
+    top: 9rem;
+  }
+}
+
+.item5 p:nth-child(2){
+  @include mq(lgs){
+    left: 7rem;
+  }
+}
+
 
 .prev, .next{
   position: absolute;

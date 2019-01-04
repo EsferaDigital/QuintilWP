@@ -17,10 +17,12 @@ Template name: Plantilla con Slider
         <p>Desafios</p>
       </section>
       <section class="Slider-item item4">
-        <p>Construir Soluciones</p>
+        <p>Construir</p>
+        <p>Soluciones</p>
       </section>
       <section class="Slider-item item5">
-        <p>Metodo Aprendizaje</p>
+        <p>Metodo</p>
+        <p>Aprendizaje</p>
       </section>
     </div>
     <div id="Prev" class="prev">&#10094;</div>
