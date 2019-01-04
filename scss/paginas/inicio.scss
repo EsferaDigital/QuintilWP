@@ -48,18 +48,16 @@
 
 .prev, .next{
   position: absolute;
-  top: calc(50% + 2rem);
+  top: 59%;
   color: white;
   padding: 10px;
+  font-size: 1.5rem;
   cursor: pointer;
-  &:hover{
-    color: color(secondary);
-  }
   @include mq(smH){
-    top: calc(50% + 3.5rem);
+    top: calc(50vh + 3rem);
   }
   @include mq(md){
-    top: calc(50% + 2.5rem);
+    top: calc(50vh + 2rem);
   }
   @include mq(mdl){
     font-size: 2rem;
@@ -67,6 +65,9 @@
   }
   @include mq(lgs){
     top: calc(50% + 4rem);
+    &:hover{
+      color: color(secondary);
+    }
   }
 }
 

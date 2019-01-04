@@ -9,6 +9,16 @@ function showHide(){
   }
 }
 
+function hideMenu(){
+  mainMenu.classList.remove('show-menu');
+}
+
+document.addEventListener('click', e => {
+  if (e.target !== mainMenu && e.target !== btnMenu){
+    hideMenu();
+  }
+});
+
 btnMenu.addEventListener('click', showHide);
 
 function efectos(){
@@ -21,7 +31,7 @@ function efectos(){
 }
 
 function showUp() {
-	var scrollVertical = Jquery(window).scrollTop(),
+	var scrollVertical = jQuery(window).scrollTop(),
 		scrollHorizontal = jQuery(window).scrollLeft()
 	//console.log(scrollVertical, scrollHorizontal)
 	//Si scrollVertical es mayor a 700px al id up añadele un fadeIn, sino añadele un fadeOut

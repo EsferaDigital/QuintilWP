@@ -181,6 +181,9 @@
   left: 0;
   color: white;
   background-color: color(primary);
+  @include mq(lgm){
+    top: 2rem;
+  }
   &.zoom-in{
     animation: zoomIn .5s forwards;
     @keyframes zoomIn{
