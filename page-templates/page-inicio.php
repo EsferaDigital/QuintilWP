@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Plantilla con Slider
+Template name: Inicio
  */
 ?>
 <?php get_header(); ?>

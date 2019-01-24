@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Plantilla para Inicio
+Template name: Que hacemos
  */
 ?>
 <?php get_header(); ?>
@@ -150,4 +150,3 @@ Template name: Plantilla para Inicio
   </div>
 </main>
 <?php get_footer(); ?>
-

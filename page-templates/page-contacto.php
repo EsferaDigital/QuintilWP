@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Plantilla para Contacto
+Template name: Contactanos
  */
 ?>
 <?php get_header();?>

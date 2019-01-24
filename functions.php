@@ -29,12 +29,12 @@ if(!function_exists('quintil_scripts')):
     wp_register_script('scripts', $scripts, array('Jquery'), '1.0.0', true);
 
     if(is_front_page()):
-      wp_register_style('homestyle', get_template_directory_uri() . '/css/home.css', array(), '1.0.0', 'all');
+      wp_register_style('iniciostyle', get_template_directory_uri() . '/css/inicio.css', array(), '1.0.0', 'all');
       wp_register_script('inicioscript', get_template_directory_uri() . '/js/inicio.js', array(), '1.0.0', true);
 
 
       wp_enqueue_style('style');
-      wp_enqueue_style('homestyle');
+      wp_enqueue_style('iniciostyle');
       wp_enqueue_script('Jquery');
       wp_enqueue_script('inicioscript');
     endif;
@@ -64,11 +64,25 @@ if(!function_exists('quintil_scripts')):
       wp_enqueue_script('Jquery');
       wp_enqueue_script('somos-script');
     endif;
+
+    wp_enqueue_style('style');
     wp_enqueue_style('icons');
     wp_enqueue_script('scripts');
   }
 endif;
 add_action( 'wp_enqueue_scripts', 'quintil_scripts' );
+
+// Añade un span leer más a cada entrada
+if(!function_exists('read_more')):
+  function read_more(){
+    $url_post = get_permalink();
+    return "&nbsp;<a href='$url_post'><span class='vermas'>Ver más</span></a>";
+  }
+endif;
+
+add_filter('excerpt_more', 'read_more');
+
+// Añade caracteristicas especiales
 
 if(!function_exists('quintil_custom')):
   function quintil_custom(){
