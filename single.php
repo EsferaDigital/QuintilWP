@@ -12,6 +12,7 @@
     endif;
   ?>
   </main>
+  <?php comments_template();?>
 </div>
 <style>
   .Search{

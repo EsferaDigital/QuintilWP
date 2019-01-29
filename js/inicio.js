@@ -21,7 +21,7 @@ function moverD(){
 function moverI(){
   slider.animate({
     marginLeft: 0
-  }, 700, function(){
+  }, 900, function(){
     jQuery('#slider section:last').insertBefore('#slider section:first')
     slider.css('margin-left', '-' + 100 + '%')
   })
@@ -38,7 +38,7 @@ prev.on('click', function(){
 function autoplay(){
   setInterval(function(){
     moverD();
-  }, 6000)
+  }, 2000)
 }
 
 autoplay();

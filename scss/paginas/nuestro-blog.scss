@@ -187,6 +187,9 @@
       @include mq(md){
         font-size: 1.2rem;
       }
+      &:hover{
+        color: color(tertiary);
+      }
     }
   }
 }

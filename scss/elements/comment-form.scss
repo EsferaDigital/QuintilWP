@@ -1,0 +1,214 @@
+.comments{
+  // border: 2px solid red;
+  & h3{
+    text-align: center;
+    color: color(text);
+    font-weight: 500;
+  }
+}
+
+.commentlist{
+  // border: 2px solid blue;
+  max-width: 800px;
+  margin: 1rem auto;
+  & li{
+    padding: 0 1rem;
+    & .children{
+      position: relative;
+      &:after{
+        content: "";
+        background-color: color(text);
+        position: absolute;
+        top: 10%;
+        height: 80%;
+        width: 1px;
+      }
+    }
+  }
+  & li:nth-of-type(even){
+    background-color: #EEEEED;
+  }
+}
+
+.comment-body{
+  padding: 1rem 0;
+}
+
+.comment-meta{
+  border-bottom: 1px solid color(text);
+  padding-bottom: .5rem;
+}
+
+.comment-author.vcard{
+  color: color(text);
+  & img{
+    display: none;
+  }
+  & .fn{
+    text-transform: capitalize;
+    font-weight: 500;
+    color: color(text);
+  }
+}
+
+.comment-metadata{
+  & a{
+    color: color(text);
+    &:hover{
+      color: color(tertiary);
+    }
+  }
+}
+
+.edit-link .comment-edit-link{
+  color: color(secondary);
+}
+
+.comment-content{
+  color: color(text);
+  padding: 1rem 0;
+}
+
+.comment-reply-link{
+  color: color(secondary);
+  &:hover{
+    color: color(tertiary);
+  }
+}
+
+.comment-respond{
+  background-color: color(primary);
+  margin: auto;
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+#reply-title{
+  text-align: center;
+  color: white;
+  font-family: $secondary-font;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1.5rem 0;
+  @include mq(md){
+    font-size: 3rem;
+  }
+  @include mq(mdl){
+    font-size: 3.5rem;
+  }
+}
+
+.CommentForm{
+  display: grid;
+  grid-template-columns: 1fr;
+  @include mq(md){
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+  }
+  &-item{
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    // border: 1px solid green;
+    padding: .5rem 0;
+    & textarea, input{
+      margin-right: .5rem;
+      border: none;
+      padding-left: .5rem;
+      @include mq(smH){
+        margin-right: 1rem;
+      }
+      @include mq(md){
+        margin: 0 1rem 0 .5rem;
+        font-size: 1.1rem;
+      }
+    }
+    & textarea{
+      height: 10rem;
+    }
+    & i{
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      @include mq(md){
+        font-size: 1.7rem;
+      }
+    }
+  }
+  &-item:nth-of-type(1){
+    order: 5;
+    & p{
+      grid-column: 2 / 3;
+      color: white;
+      font-size: .9rem;
+      @include mq(md){
+        margin-left: .5rem;
+      }
+    }
+  }
+  &-item:nth-of-type(2){
+    order: 1;
+    // background-color: green;
+  }
+  &-item:nth-of-type(3){
+    order: 2;
+    // background-color: yellow;
+  }
+  &-item:nth-of-type(4){
+    order: 3;
+    // background-color: blue;
+  }
+  &-item:nth-of-type(5){
+    order: 4;
+    // background-color: pink;
+  }
+  & .form-submit{
+    // background-color: brown;
+    order: 6;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 2rem;
+    & .submit{
+      background: $degradado;
+      color: white;
+      text-transform: uppercase;
+      max-width: 6rem;
+      margin: auto;
+      border-radius: 5px;
+      padding: .5rem;
+      border: none;
+      cursor: pointer;
+      @include mq(md){
+        font-size: 1.1rem;
+      }
+      &:hover{
+        opacity: .8;
+      }
+      &:active{
+        transform: scale(.95);
+      }
+    }
+  }
+}
+
+.logged-in-as{
+  color: transparent;
+  text-align: center;
+  line-height: .7rem;
+  margin-bottom: .5rem;
+  & a{
+    color: white;
+    display: block;
+    // border: 1px solid red;
+    margin: 0;
+    @include mq(md){
+      display: inline;
+    }
+  }
+  & a:nth-of-type(2){
+    color: color(secondary);
+    &:hover{
+      color: color(tertiary);
+    }
+  }
+}
