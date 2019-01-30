@@ -1,13 +1,7 @@
 .Main-somos{
   width: 100%;
   height: auto;
-  min-height: 85vh;
-  margin: 1rem auto;
-  // border: 1px solid red;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 .c-somos{
@@ -79,7 +73,203 @@
       padding: 1rem;
     }
     @include mq(lgs){
-      padding: 1.7rem;
+      padding: 1.5rem;
+    }
+    &-link{
+      float: right;
+      & a{
+        color: color(primary);
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        border-bottom: 1px solid color(primary);
+        &:hover{
+          color: color(tertiary);
+          border-bottom: 1px solid color(tertiary);
+        }
+        @include mq(md){
+          font-size: 2rem;
+        }
+        @include mq(lgs){
+          font-size: 2.3rem;
+        }
+      }
     }
   }
+}
+
+.c-somos-equipo{
+  margin: 2rem auto;
+  margin-top: 3rem;
+  background-color: color(bg);
+  & h3{
+    color: color(primary);
+    text-align: center;
+    font-family: $secondary-font;
+    font-weight: 500;
+    padding: 1rem 0;
+    // border: 1px solid blue;
+    @include mq(md){
+      font-size: 2rem;
+    }
+    @include mq(lgs){
+      font-size: 3rem;
+    }
+  }
+}
+
+.EquipoGallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include mq(md){
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &-item{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: color(secondary);
+      opacity: .3;
+    }
+    &-text{
+      position: absolute;
+      display: flex;
+      width: 100%;
+      z-index: 1;
+      height: 100%;
+      flex-wrap: wrap;
+      align-content: center;
+      background: $degradadot;
+      transform: scale3d(1,0,1);
+      transition: transform .5s;
+      & p{
+        width: 80%;
+        margin: auto;
+        height: 2rem;
+        text-align: center;
+        color: white;
+        padding-top: 1rem;
+        @include mq(md){
+          font-size: 1.3rem;
+        }
+        @include mq(lgs){
+          font-size: 1.5rem;
+        }
+      }
+      & p:first-child{
+        border-bottom: 1px solid white;
+        padding-top: 0;
+      }
+    }
+    & img{
+      display: block;
+    }
+  }
+}
+
+.EquipoGallery-item:hover .EquipoGallery-item-text{
+  transform: scale3d(1,1,1);
+}
+
+.c-somos-cards{
+  // border: 1px solid red;
+  margin-bottom: 1rem;
+}
+
+.somos-card{
+  // border: 1px solid blue;
+  padding: 1rem 0;
+  @include mq(mdl){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &-figure{
+    // border: 1px solid green;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    align-items: center;
+    &-info{
+      justify-self: start;
+      // border: 1px solid red;
+      padding-left: .5rem;
+      & p{
+        color: color(primary);
+        padding: .5rem;
+        @include mq(md){
+          font-size: 1.3rem;
+        }
+      }
+      & p:first-child{
+        text-transform: uppercase;
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          min-width: 6rem;
+          max-width: 95%;
+          height: 1px;
+          background-color: color(primary);
+          top: 100%;
+          // @include mq(md){
+          //   width: 100%;
+          // }
+        }
+      }
+    }
+    &-sociales{
+      transform: translate3d(.5rem,0,0);
+      & a{
+        color: color(primary);
+        font-size: 1.5rem;
+        &:hover{
+          color: color(tertiary);
+        }
+      }
+    }
+    & img{
+      display: block;
+    }
+  }
+  & figcaption{
+    // border: 1px solid purple;
+    justify-self: center;
+    align-self: center;
+    padding: 0 .5rem;
+    position: relative;
+    padding-top: 2rem;
+    @include mq(mdl){
+      padding: 0 .7rem;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      background-color: color(primary);
+      margin: auto;
+      top: 1rem;
+      right: 0;
+      left: 0;
+      width: 95%;
+      height: 1px;
+      @include mq(mdl){
+        width: 1px;
+        height: 95%;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+      }
+    }
+    & p{
+      margin: .5rem auto;
+      color: color(primary);
+      @include mq(md){
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.somos-card:nth-child(even){
+  background-color: color(bg);
 }
