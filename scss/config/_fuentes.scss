@@ -38,10 +38,11 @@ h6, small{font-size: .75rem;}
        url(./fonts/sun_valley.woff2) format('woff2');
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display');
+
 
 $secondary-font: 'Sun-valley', serif;
-$primary-font: 'Lato', sans-serif;
+$primary-font: 'Playfair Display', serif;
 $menu-font: 'Lato', sans-serif;
 
 

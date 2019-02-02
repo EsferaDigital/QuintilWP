@@ -1,0 +1,27 @@
+.Pagination{
+  background-color: color(primary);
+  color: white;
+  margin: 0 auto 1rem;
+  &-nav{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  & .page-numbers{
+    color: white;
+    font-size: 1.3rem;
+    font-family: $menu-font;
+    &:hover{
+      color: color(secondary);
+    }
+  }
+  & .current{
+    font-weight: bold;
+    font-size: 1.7rem;
+    &:hover{
+      color: white;
+    }
+  }
+}

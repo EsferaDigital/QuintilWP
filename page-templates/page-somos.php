@@ -18,54 +18,14 @@ Template name: Quienes Somos
           <p>Nos mueve la innovación, y nos encanta lograr que las empresas, los territorios y la sociedad se transforme a través de ella.</p>
         </div>
         <div class="c-somos-article-link">
-          <a href="#Equipo">Conoce al equipo</a>
+          <a class="ver-Mas" href="#Equipo">Conoce al equipo</a>
         </div>
       </div>
     </section>
     <section class="c-somos-equipo" id="Equipo">
       <h3>Conoce al Equipo</h3>
       <div class="EquipoGallery">
-        <a href="#Constanza" class="EquipoGallery-item">
-          <div>
-            <div class="EquipoGallery-item-text">
-              <p>Constanza</p>
-            </div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/constanza.jpg')); ?>" >
-          </div>
-        </a>
-        <a href="#Walter" class="EquipoGallery-item">
-          <div>
-            <div class="EquipoGallery-item-text">
-              <p>Walter</p>
-            </div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/walter.jpg')); ?>" >
-          </div>
-        </a>
-        <a href="#Tamara" class="EquipoGallery-item">
-          <div>
-            <div class="EquipoGallery-item-text">
-              <p>Tamara</p>
-            </div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/tamara.jpg')); ?>" >
-          </div>
-        </a>
-        <a href="#Tomas" class="EquipoGallery-item">
-          <div>
-            <div class="EquipoGallery-item-text">
-              <p>Tomas</p>
-            </div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/tomas.jpg')); ?>" >
-          </div>
-        </a>
-        <a href="#Katherine" class="EquipoGallery-item">
-          <div>
-            <div class="EquipoGallery-item-text">
-              <p>katherine</p>
-            </div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/katherine.jpg')); ?>" >
-          </div>
-        </a>
-        <a href="#Sylvio" class="EquipoGallery-item">
+        <a href="#Sylvio" class="ver-Mas EquipoGallery-item">
           <div>
             <div class="EquipoGallery-item-text">
               <p>Sylvio</p>
@@ -73,27 +33,66 @@ Template name: Quienes Somos
             <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/sylvio.jpg')); ?>" >
           </div>
         </a>
+        <a href="#Walter" class="ver-Mas EquipoGallery-item">
+          <div>
+            <div class="EquipoGallery-item-text">
+              <p>Walter</p>
+            </div>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/walter.jpg')); ?>" >
+          </div>
+        </a>
+        <a href="#Tamara" class="ver-Mas EquipoGallery-item">
+          <div>
+            <div class="EquipoGallery-item-text">
+              <p>Tamara</p>
+            </div>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/tamara.jpg')); ?>" >
+          </div>
+        </a>
+        <a href="#Tomas" class="ver-Mas EquipoGallery-item">
+          <div>
+            <div class="EquipoGallery-item-text">
+              <p>Tomás</p>
+            </div>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/tomas.jpg')); ?>" >
+          </div>
+        </a>
+        <a href="#Katherine" class="ver-Mas EquipoGallery-item">
+          <div>
+            <div class="EquipoGallery-item-text">
+              <p>Katherine</p>
+            </div>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/katherine.jpg')); ?>" >
+          </div>
+        </a>
+        <a href="#Constanza" class="ver-Mas EquipoGallery-item">
+          <div>
+            <div class="EquipoGallery-item-text">
+              <p>Constanza</p>
+            </div>
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/constanza.jpg')); ?>" >
+          </div>
+        </a>
       </div>
     </section>
     <section class="c-somos-cards">
-      <figure class="somos-card" id="Constanza">
+      <figure class="somos-card" id="Sylvio">
         <div class="somos-card-figure">
           <div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/constanza.jpg')); ?>" >
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/sylvio.jpg')); ?>" >
           </div>
           <div class="somos-card-figure-info">
-            <p>Constanza</p>
-            <p>Juventud divino tesoro</p>
+            <p>Sylvio</p>
+            <p>Experiencia</p>
             <div class="somos-card-figure-sociales">
-              <a href="#" class="icon-linkedin"></a>
-              <a href="https://www.instagram.com/nala_vroc/" class="icon-instagram" target="_blank"></a>
+              <a class="icon-linkedin"></a>
             </div>
           </div>
         </div>
         <figcaption>
-          <p>Dedicada, comprometida, entusiasta, con energía propia de la juventud, siempre está dispuesta a enfrentar nuevos desafíos y a participar de cada actividad para sumar más experiencias.</p>
-          <p>Ingeniera Comercial de la PUCV Diplomada en Innovación y Emprendimiento UAI, su labor ha estado enfocada en el desarrollo de diversos emprendimientos en áreas como la construcción, gastronomía y diseño de aplicaciones móviles. Emprendedora desde los inicios de sus estudios universitarios, llegando a co crear la primera feria de comercio Justo de la ciudad de Valparaíso. Actualmente lidera la startup tecnológica Visualfeed, aplicación para encuestas personalizadas.</p>
-          <p>Constanza trabaja en las tareas de estudios y búsqueda de oportunidades, participa en la ejecución de nuestros programas, apoya la comunicación y la realización de talleres.</p>
+          <p>Amable, cercano, empático, experto en crear climas eficientes de trabajo con su capacidad de análisis en las relaciones humanas, un señor empoderado y actualizado en el ámbito de la Innovación y el emprendimiento, ha estado desde los primeros pasos en la  incorporación de la cultura de la innovación en Chile liderando el comienzo de iniciativas de CORFO en esta materia, ha trabajado con distintas empresas, universidades, gobiernos y emprendedores de toda latinoamérica.</p>
+          <p>Doctor en Comunicación Organizacional, Ingeniero Civil de la Universidad de Chile, Diplomado en Propiedad Industrial e Intelectual, Coach Profesional, Instructor y Facilitador del Programa Training TWI, Instructor Facilitador en Metodología CEFE.</p>
+          <p>Sylvio es quien nos ayuda a crear las herramientas metodológicas de nuestros programas, los talleres y capacitaciones, participa además en la ejecución de ellos.</p>
         </figcaption>
       </figure>
       <figure class="somos-card" id="Walter">
@@ -103,7 +102,7 @@ Template name: Quienes Somos
           </div>
           <div class="somos-card-figure-info">
             <p>Walter</p>
-            <p>Visionario</p>
+            <p>Visión</p>
             <div class="somos-card-figure-sociales">
               <a class="icon-linkedin"></a>
             </div>
@@ -142,7 +141,7 @@ Template name: Quienes Somos
           </div>
           <div class="somos-card-figure-info">
             <p>Tomas</p>
-            <p>Talento Millennial</p>
+            <p>Creatividad</p>
             <div class="somos-card-figure-sociales">
               <a href="https://www.linkedin.com/in/tom%C3%A1s-gentina-nassar-36515764/" target="_blank" class="icon-linkedin"></a>
             </div>
@@ -163,7 +162,7 @@ Template name: Quienes Somos
           </div>
           <div class="somos-card-figure-info">
             <p>katherine</p>
-            <p>Zen</p>
+            <p>Templanza</p>
             <div class="somos-card-figure-sociales">
               <a href="https://www.linkedin.com/in/katherine-hertha-rosenthal-navarro-3893a32b" class="icon-linkedin" target="_blank"></a>
             </div>
@@ -177,23 +176,24 @@ Template name: Quienes Somos
           <p>Katherine es quien está a cargo del control de gestión, apoya en la redacción y formulación de proyectos, acompaña y guía los procesos operativos y administrativos y elabora reportes.</p>
         </figcaption>
       </figure>
-      <figure class="somos-card" id="Sylvio">
+      <figure class="somos-card" id="Constanza">
         <div class="somos-card-figure">
           <div>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/sylvio.jpg')); ?>" >
+            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/constanza.jpg')); ?>" >
           </div>
           <div class="somos-card-figure-info">
-            <p>Sylvio</p>
-            <p>La voz de la Experiencia</p>
+            <p>Constanza</p>
+            <p>Juventud</p>
             <div class="somos-card-figure-sociales">
-              <a class="icon-linkedin"></a>
+              <a href="#" class="icon-linkedin"></a>
+              <a href="https://www.instagram.com/nala_vroc/" class="icon-instagram" target="_blank"></a>
             </div>
           </div>
         </div>
         <figcaption>
-          <p>Amable, cercano, empático, experto en crear climas eficientes de trabajo con su capacidad de análisis en las relaciones humanas, un señor empoderado y actualizado en el ámbito de la Innovación y el emprendimiento, ha estado desde los primeros pasos en la  incorporación de la cultura de la innovación en Chile liderando el comienzo de iniciativas de CORFO en esta materia, ha trabajado con distintas empresas, universidades, gobiernos y emprendedores de toda latinoamérica.</p>
-          <p>Doctor en Comunicación Organizacional, Ingeniero Civil de la Universidad de Chile, Diplomado en Propiedad Industrial e Intelectual, Coach Profesional, Instructor y Facilitador del Programa Training TWI, Instructor Facilitador en Metodología CEFE.</p>
-          <p>Sylvio es quien nos ayuda a crear las herramientas metodológicas de nuestros programas, los talleres y capacitaciones, participa además en la ejecución de ellos.</p>
+          <p>Dedicada, comprometida, entusiasta, con energía propia de la juventud, siempre está dispuesta a enfrentar nuevos desafíos y a participar de cada actividad para sumar más experiencias.</p>
+          <p>Ingeniera Comercial de la PUCV Diplomada en Innovación y Emprendimiento UAI, su labor ha estado enfocada en el desarrollo de diversos emprendimientos en áreas como la construcción, gastronomía y diseño de aplicaciones móviles. Emprendedora desde los inicios de sus estudios universitarios, llegando a co crear la primera feria de comercio Justo de la ciudad de Valparaíso. Actualmente lidera la startup tecnológica Visualfeed, aplicación para encuestas personalizadas.</p>
+          <p>Constanza trabaja en las tareas de estudios y búsqueda de oportunidades, participa en la ejecución de nuestros programas, apoya la comunicación y la realización de talleres.</p>
         </figcaption>
       </figure>
     </section>

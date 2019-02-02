@@ -1,0 +1,40 @@
+.Widget{
+  // border: 2px solid blue;
+  position: relative;
+  padding: 1rem 0;
+  min-height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-title{
+    font-family: $secondary-font;
+    text-align: center;
+    font-size: 2rem;
+    color: color(primary);
+    font-weight: 500;
+    @include mq(md){
+      font-size: 2.5rem;
+    }
+    @include mq(lgs){
+      font-size: 3rem;
+    }
+    @include mq(lgm){
+      font-size: 3.5rem;
+    }
+    &-search{
+      font-family: $menu-font;
+      color: color(primary);
+    }
+  }
+  & mark{
+    margin-left: .5rem;
+    padding: .5rem;
+    color: white;
+    background-color: color(tertiary);
+    font-family: $menu-font;
+  }
+}
+
+.widget-single{
+ min-height: 3rem;
+}

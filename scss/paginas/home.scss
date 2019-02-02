@@ -10,8 +10,10 @@
 .content-card{
   // border: 1px solid red;
   @include mq(md){
+    margin-top: 2rem;
     grid-gap: 1rem;
     display: grid;
+    padding: 2rem 0;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -175,7 +177,7 @@
   margin-top: 1rem;
   // border: 3px solid red;
   @include mq(lgm){
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 

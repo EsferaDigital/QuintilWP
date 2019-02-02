@@ -41,4 +41,4 @@ function autoplay(){
   }, 2000)
 }
 
-autoplay();
+// autoplay();

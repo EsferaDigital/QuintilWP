@@ -107,9 +107,10 @@
     font-family: $secondary-font;
     font-weight: 500;
     padding: 1rem 0;
+    font-size: 2rem;
     // border: 1px solid blue;
     @include mq(md){
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     @include mq(lgs){
       font-size: 3rem;
@@ -223,6 +224,9 @@
       & a{
         color: color(primary);
         font-size: 1.5rem;
+        @include mq(mdl){
+          font-size: 2rem;
+        }
         &:hover{
           color: color(tertiary);
         }

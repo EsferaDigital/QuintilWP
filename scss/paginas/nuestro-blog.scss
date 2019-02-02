@@ -64,65 +64,7 @@
   }
 }
 
-.Widget{
-  // border: 2px solid blue;
-  position: relative;
-  padding-bottom: 1rem;
-  min-height: 5rem;
-  &-title{
-    font-family: $secondary-font;
-    text-align: center;
-    font-size: 2rem;
-    color: color(primary);
-    font-weight: 500;
-    @include mq(md){
-      font-size: 2.5rem;
-    }
-    @include mq(lgs){
-      font-size: 3rem;
-    }
-    @include mq(lgm){
-      font-size: 3.5rem;
-    }
-  }
-}
 
-.widget-single{
- min-height: 3rem;
-}
-
-.Search{
-  position: absolute;
-  right: 1rem;
-  top: 3rem;
-  outline: none;
-  @include mq(md){
-    top: 2rem;
-  }
-  & input{
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(207,207,209);
-    padding: .5rem 0;
-    padding-left: 1rem;
-    outline: none;
-    &:active{
-      border: none;
-    }
-    &::placeholder{
-      color: color(primary);
-      text-align: center;
-    }
-  }
-  & button{
-    background-color: transparent;
-    position: relative;
-    top: 2px;
-    border: none;
-    font-size: 1.5rem;
-    color: color(primary);
-  }
-}
 
 .Single{
   // border: 1px solid purple;

@@ -9,7 +9,7 @@ Template name: Contactanos
   <section class="contacto-header">
     <p>Estamos instalados en Valparaíso. Empeñados en hacer de esta ciudad la capital mundial del</p>
     <h2>Emprendimiento e innovacion</h2>
-    <p>lo que no impide que nos movamos por el mundo, activando ecosistemas y promoviendo relaciones virtuosas</p>
+    <p>lo que no impide que nos movamos por el mundo, activando ecosistemas y promoviendo relaciones virtuosas.</p>
   </section>
   <section class="Formulario">
     <h2>Contactanos</h2>

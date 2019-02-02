@@ -21,11 +21,16 @@
 
 @import "../scss/elements/botones";
 @import "../scss/elements/comment-form";
+@import "../scss/elements/pagination";
+@import "../scss/elements/widgets";
+@import "../scss/elements/search-form";
+
 
 // secciones
 
 @import "../scss/secciones/header";
 @import "../scss/secciones/footer";
+@import "../scss/secciones/content-author";
 
 // Paginas
 @import "../scss/paginas/inicio";
@@ -33,4 +38,3 @@
 @import "../scss/paginas/somos";
 @import "../scss/paginas/contacto";
 @import "../scss/paginas/nuestro-blog";
-@import "../scss/paginas/search";

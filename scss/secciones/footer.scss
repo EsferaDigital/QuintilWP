@@ -6,9 +6,11 @@
   & p{
     color: white;
     padding-bottom: 1rem;
+    font-family: $menu-font;
   }
   & a{
     color: white;
+    font-family: $menu-font;
     &:hover{
       color: color(secondary);
     }
@@ -16,6 +18,7 @@
   & small{
     color: white;
     font-size: .9rem;
+    font-family: $menu-font;
   }
   &-sociales{
     padding: 1rem;
@@ -46,14 +49,16 @@
   display: none;
   position: fixed;
   background-color: transparent;
-  color: color(secondary);
+  color: color(tertiary);
   font-size: 2.5rem;
-  padding: 0;
-  bottom: 10%;
-  right: 5%;
+  padding: .5rem;
+  bottom: 9%;
+  right: 10%;
   transition: color .5s;
   cursor: pointer;
+  border: transparent;
+  outline: transparent;
   &:hover{
-    color: color(secondaryt);
+    transform: scale(1.1);
   }
 }

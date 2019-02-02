@@ -9,6 +9,7 @@ Template name: Inicio
     <div class="Slider" id="slider">
       <section class="Slider-item item1">
         <p>Innovacion</p>
+        <p class="Slider-item-text"> Facilitamos encuentros improbables, buscamos talentos, soluciones e ideas creativas para fortalecer la cultura del emprendimiento y la innovación.</p>
       </section>
       <section class="Slider-item item2" >
         <p>Ideas</p>
@@ -25,8 +26,8 @@ Template name: Inicio
         <p>Aprendizaje</p>
       </section>
     </div>
-    <div id="Prev" class="prev">&#10094;</div>
-    <div id="Next" class="next">&#10095;</div>
+    <div id="Prev" class="Prev">&#10094;</div>
+    <div id="Next" class="Next">&#10095;</div>
   </div>
 </main>
 <?php get_footer(); ?>
