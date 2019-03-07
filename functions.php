@@ -72,16 +72,6 @@ if(!function_exists('quintil_scripts')):
 endif;
 add_action( 'wp_enqueue_scripts', 'quintil_scripts' );
 
-// Añade un span leer más a cada entrada
-if(!function_exists('read_more')):
-  function read_more(){
-    $url_post = get_permalink();
-    return "&nbsp;<a href='$url_post'><span class='vermas'>Ver más</span></a>";
-  }
-endif;
-
-add_filter('excerpt_more', 'read_more');
-
 // Añade caracteristicas especiales
 
 if(!function_exists('quintil_custom')):
@@ -165,12 +155,6 @@ if(!function_exists('quintil_register_sidebars')):
 endif;
 add_action('widgets_init', 'quintil_register_sidebars');
 
-// Archivos externos
-
-require_once get_template_directory() . '/inc/custom-login.php';
-
-// require_once get_template_directory() . '/inc/custom-contact-form.php';
-
 // Hooks admin-post
 add_action( 'admin_post_nopriv_process_form', 'send_mail_data' );
 add_action( 'admin_post_process_form', 'send_mail_data' );
@@ -199,3 +183,11 @@ function send_mail_data() {
 
   wp_redirect( home_url('/contactanos') .'?sent='. $sendmail );
 }//asumiendo que existe esta url
+
+// Archivos externos
+
+// require_once get_template_directory() . '/inc/customizer.php';
+
+require_once get_template_directory() . '/inc/custom-login.php';
+
+require_once get_template_directory() . '/inc/custom-excerpt.php';

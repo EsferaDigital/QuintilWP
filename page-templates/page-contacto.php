@@ -8,11 +8,11 @@ Template name: Contactanos
   <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/fondo_contacto.jpg')); ?>" >
   <section class="contacto-header">
     <p>Estamos instalados en Valparaíso. Empeñados en hacer de esta ciudad la capital mundial del</p>
-    <h2>Emprendimiento e innovacion</h2>
+    <h2>Emprendimiento e innovación</h2>
     <p>lo que no impide que nos movamos por el mundo, activando ecosistemas y promoviendo relaciones virtuosas.</p>
   </section>
   <section class="Formulario">
-    <h2>Contactanos</h2>
+    <h2>Contáctanos</h2>
     <?php
       if ( isset($_GET['sent']) ){
         if ( $_GET['sent'] == '1'){

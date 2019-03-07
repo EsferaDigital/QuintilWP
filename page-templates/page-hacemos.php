@@ -57,14 +57,14 @@ Template name: Que hacemos
         <div class="delantera">
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos3.jpg')); ?>" >
           <div class="delantera-text">
-            <h2>Innovacion abierta</h2>
+            <h2>Innovación abierta</h2>
             <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
           </div>
         </div>
         <a class="verMas" href="#Innovacion">
           <figcaption class="trasera">
             <h2 class="card-rotate-title">
-              Innovacion abierta
+              Innovación abierta
             </h2>
             <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
             <p class="card-rotate-description">
@@ -93,9 +93,9 @@ Template name: Que hacemos
           <p>Apoyamos a organizaciones gubernamentales, universidades, gremios y empresas que asumen el desafío de Innovar. En nuestro andar, hemos apoyado al desarrollo de diversos ecosistemas universitarios, atendiéndolos desde sus particularidades y las características de su entorno, creando e implementando diversos planes para potenciar sus capacidades de innovación y emprendimiento. Hemos acompañado también a gremios empresariales en su rol promotor del ecosistema.</p>
         </div>
         <div class="c-content-hacemos-article-img">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/desafios.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/soluciones.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendizaje.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/ecosistemas1.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/ecosistemas2.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/ecosistemas3.jpg')); ?>">
         </div>
       </article>
     </section>
@@ -116,9 +116,9 @@ Template name: Que hacemos
           <p>Apoyamos en la búsqueda de financiamiento público y privado, brindamos métodos y conexiones para que las empresas puedan validar sus iniciativas y posicionarlas en el mercado, sin necesidad de descuidar su día a día.</p>
         </div>
         <div class="c-content-hacemos-article-img">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/desafios.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/soluciones.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendizaje.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/empresas1.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/empresas2.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/empresas3.jpg')); ?>">
         </div>
       </article>
     </section>
@@ -128,7 +128,7 @@ Template name: Que hacemos
       <div class="c-content-hacemos-img">
         <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/hacemos3.jpg')); ?>">
         <figcaption>
-          <h2>Innovacion abierta</h2>
+          <h2>Innovación abierta</h2>
           <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>">
         </figcaption>
       </div>
@@ -141,9 +141,9 @@ Template name: Que hacemos
           <p>Hemos creado nuestros propios métodos, acumulando amplia experiencia a través de los programas que hemos realizado con diversas empresas e industrias en distintos territorios de Chile y Latinoamérica.</p>
         </div>
         <div class="c-content-hacemos-article-img">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/desafios.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/soluciones.jpg')); ?>">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/aprendizaje.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/innovacion-abierta1.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/innovacion-abierta2.jpg')); ?>">
+          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/innovacion-abierta3.jpg')); ?>">
         </div>
       </article>
     </section>

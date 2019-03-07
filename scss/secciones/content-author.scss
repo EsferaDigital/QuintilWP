@@ -1,3 +1,27 @@
 .Author{
-  border: 1px solid red;
+  // border: 1px solid red;
+  &-figure{
+    border: 2px solid blue;
+    @include mq(md){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    &-img{
+      border: 2px solid purple;
+      min-height: 5rem;
+    }
+  }
+  &-data{
+    border: 2px solid green;
+    padding: 1rem;
+    & p{
+      color: color(primary);
+    }
+    & p:first-child{
+      padding: .5rem 0;
+      text-transform: uppercase;
+      border-bottom: 1px solid color(primary);
+      margin-bottom: .5rem;
+    }
+  }
 }
