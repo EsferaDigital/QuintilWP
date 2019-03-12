@@ -10,7 +10,7 @@
 *@version 1.0.0
 */
 
-//Establece el ancho máximo permitido para cualquier contenido en el temz, como video o imagenes.
+//Establece el ancho máximo permitido para cualquier contenido en el tema, como video o imagenes.
 if(!isset($content_width)){
   $content_width = 800;
 }
@@ -106,6 +106,39 @@ if(!function_exists('quintil_custom')):
       'chat'
     ));
 
+    //Paleta de colores Gutenberg
+    add_theme_support( 'editor-color-palette', array(
+      array(
+        'name' => __( 'gris', 'qtl' ),
+        'slug' => 'gris',
+        'color' => '#464646',
+      ),
+      array(
+        'name' => __( 'blanco invierno', 'qtl' ),
+        'slug' => 'blanco-invierno',
+        'color' => '#EEEEED',
+      ),
+      array(
+        'name' => __( 'amarillo', 'qtl' ),
+        'slug' => 'amarillo',
+        'color' => '#ff9f1c',
+      ),
+      array(
+        'name' => __( 'verde claro', 'qtl' ),
+        'slug' => 'verde-claro',
+        'color' => '#47A367',
+      ),
+    ));
+
+    //Deshabilita colores personalizados
+    add_theme_support( 'disable-custom-colors' );
+
+    //Habilita alineación de imágenes
+    add_theme_support( 'align-wide' );
+
+    //Hace responsive los elementos embebidos
+    add_theme_support( 'responsive-embeds' );
+
     //Permite que los themes y plugins administren el titulo. Al usarlo no debemos poner el title en el header.php
     add_theme_support('title-tag');
 
@@ -120,6 +153,14 @@ if(!function_exists('quintil_custom')):
   }
 endif;
 add_action('after_setup_theme', 'quintil_custom');
+
+// Estilos para el editor gutenberg
+if(!function_exists('quintil_editor_styles')):
+  function quintil_editor_styles() {
+    wp_enqueue_style('editor-style', get_theme_file_uri('/css/editor-style.css'), false, '1.0.0', 'all');
+  }
+endif;
+add_action( 'enqueue_block_editor_assets', 'quintil_editor_styles');
 
 if(!function_exists('quintil_menus')):
   function quintil_menus(){
@@ -189,5 +230,5 @@ function send_mail_data() {
 // require_once get_template_directory() . '/inc/customizer.php';
 
 require_once get_template_directory() . '/inc/custom-login.php';
-
 require_once get_template_directory() . '/inc/custom-excerpt.php';
+require_once get_template_directory() . '/inc/custom-description.php';
