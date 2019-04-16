@@ -7,8 +7,8 @@
   background-color: color(bg);
 }
 
-.content-card{
-  // border: 1px solid red;
+.Contenedor-card{
+  // background-color: red;
   @include mq(md){
     margin-top: 2rem;
     grid-gap: 1rem;
@@ -18,156 +18,191 @@
   }
 }
 
-.delantera-text{
-  display: none;
-  @include mq(lgm){
-    display: initial;
+.Contenedor-tarjeta{
+  margin-bottom: 1rem;
+  @include mq(md){
+    margin-bottom: 0;
+  }
+  & a{
+    display: inline-block;
   }
 }
-.card-rotate{
-  // border: 1px solid red;
-  width: 95%;
-  margin: .5rem auto;
-  @include mq(md){
-    width: 100%;
-    margin: 0;
-  }
-  &:hover figure .delantera .delantera-text{
-    display: none;
-  }
-  &-figure{
-    margin: 0;
-    position: relative;
-    transition: all ease.5s;
-    transform-style: preserve-3d;
+
+.Contenedor-tarjeta:hover .Figure{
+  @include mq(lgs){
     transform: perspective(600px) rotateY(180deg);
-    @include mq(lgm){
-      transform: perspective(600px) rotateY(0deg);
-    }
-    & img, .trasera{
+  }
+}
+
+.Contenedor-tarjeta:hover .Delantera-text{
+  @include mq(lgs){
+    opacity: 0;
+  }
+}
+
+.Figure{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  transition: all ease .5s;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+  // @include mq(md){
+  //   height: 15rem;
+  // }
+}
+
+.Delantera, .Trasera{
+  width: 100%;
+  height: 100%;
+  transition: all ease .5s;
+}
+
+.Delantera{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  // background-color: green;
+  &-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1 / 2;
+    grid-column: 1;
+    & img{
       width: 100%;
       height: 100%;
-      transition: all ease .5s;
+      display: block;
     }
-    & .delantera{
-      position: relative;
-      & img{
-        display: block;
-      }
-      &-text{
-        position: absolute;
-        bottom: 7%;
-        width: 100%;
-        text-align: center;
-        & h2{
-          font-family: $secondary-font;
-          color: white;
-          font-weight: 500;
-          text-align: center;
-          font-size: 2rem;
-          @include mq(lgm){
-            font-size: 3.2rem;
-          }
-        }
-        & img{
-          width: 20%;
-          margin: auto;
-          // border: 1px solid red;
-          @include mq(lgm){
-            width: 25%;
-          }
-        }
+  }
+  &-text{
+    grid-row: 1 / 2;
+    grid-column: 1;
+    text-align: center;
+    padding-top: 43%;
+    opacity: 0;
+    @include mq(lgs){
+      opacity: 1;
+    }
+    & h2{
+      color: white;
+      font-family: $secondary-font;
+      font-weight: 500;
+      font-size: 2.5rem;
+      @include mq(md){
+        font-size: 1.7rem; //agrandar segun pantalla
       }
     }
-    & .trasera{
-      display: flex;
-      flex-wrap: wrap;
-      position: absolute;
-      top: 0;
-      background: $degradadot;
-      transform: perspective(600px) rotateY(180deg);
-      & img{
-        width: 30%;
-        height: 30%;
-        margin: auto;
-        // border: 1px solid red;
-        @include mq(smH){
-          width: 25%;
-          height: 25%;
-        }
-      }
-      & p{
-        width: 100%;
-        text-transform: uppercase;
-        text-align: center;
-        position: relative;
-        font-size: .9rem;
-        display: block;
-        color: white;
-        @include mq(smH){
-          font-size: .8rem;
-        }
-        @include mq(lgm){
-          font-size: 1.2rem;
-        }
-        &:before{
-          position: absolute;
-          content: "";
-          width: 6rem;
-          top: -3px;
-          left: calc(50% - 3rem);
-          border-top: 1px solid white;
-        }
-      }
+    & img{
+      width: 20%;
+      margin: auto;
     }
   }
 }
 
-.card-rotate:hover figure{
-  // transform: perspective(600px) rotateY(0deg);
+.Trasera{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(min-content, 1fr));
+  overflow: hidden;
+  background: color(secondaryt);
+  position: absolute;
+  top: 0;
+  align-items: center;
+  // transform: perspective(600px) rotateY(180deg);
+  // backface-visibility: hidden;
+  transform: perspective(600px) rotateY(0deg);
+  backface-visibility: visible;
+  @include mq(lgs){
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  &-title{
+    text-align: center;
+    color: white;
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-top: 1rem;
+    align-self: center;
+    // border: 1px solid red;
     @include mq(md){
-      transform: perspective(600px) rotateY(180deg);
+      font-size: 1.7rem;
+      margin-top: .25rem;
     }
-}
-
-.card-rotate-title{
-  text-align: center;
-  width: 100%;
-  font-family: $secondary-font;
-  font-weight: 500;
-  color: white;
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  @include mq(smH){
-    font-size: 1.5rem;
-    line-height: 1.5rem;
   }
-  @include mq(md){
-    font-size: 2.2rem;
-    line-height: 2.2rem;
+  &-img{
+    width: 30%;
+    margin: 1rem auto .5rem;
+    // border: 1px solid red;
+    // align-self: center;
+    @include mq(sm){
+      width: 25%;
+      margin: .5rem auto .25rem;
+    }
+    @include mq(md){
+      width: 20%;
+      margin: 0 auto;
+    }
   }
-  @include mq(lgm){
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    // border: 1px solid green;
-    position: relative;
-    top: 1.5rem;
-  }
-}
-
-.card-rotate-description{
-  width: 100%;
-  padding: 0 1rem;
-  color: white;
-  font-size: .9rem;
-  text-align: center;
-  @include mq(smH){
-    font-size: .8rem;
+  &-description{
+    text-align: center;
+    text-transform: uppercase;
     padding: 0 .5rem;
+    color: white;
+    // border: 1px solid red;
+    align-self: center;
+    @include mq(sm){
+      padding: .5rem .7rem;
+      font-size: .9rem;
+    }
+    @include mq(smm){
+      padding: 1rem .7rem;
+      font-size: 1rem;
+    }
+    @include mq(md){
+      font-size: .7rem;
+      text-transform: none;
+    }
   }
-  @include mq(lgm){
-    font-size: 1.2rem;
-    padding: 0 1rem;
+  &-more{
+    width: 5rem;
+    margin: 1rem auto 0;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    border-top: 1px solid white;
+    padding-top: .5rem;
+    @include mq(sm){
+      font-size: .9rem;
+      padding-top: .25rem;
+    }
+    @include mq(smm){
+      font-size: 1rem;
+    }
+    @include mq(md){
+      font-size: .7rem;
+      text-transform: none;
+      // padding: .5rem 0;
+      // align-self: center;
+      margin-top: .25rem;
+      border-top: 0;
+    }
+  }
+}
+
+.more3{
+  @include mq(md){
+    margin-top: 0;
+    // padding-top: 0;
+  }
+}
+
+.descripcion-larga{
+  @include mq(md){
+    padding: 0 .25rem;
   }
 }
 

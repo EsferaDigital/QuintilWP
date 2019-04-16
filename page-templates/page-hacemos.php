@@ -5,75 +5,81 @@ Template name: Que hacemos
 ?>
 <?php get_header(); ?>
 <main class="Main-home">
-  <div class="content-card">
-    <div class="card-rotate">
-      <figure class="card-rotate-figure">
-        <div class="delantera">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos1.jpg')); ?>" >
-          <div class="delantera-text">
-            <h2>Ecosistemas</h2>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
+  <div class="Contenedor-card">
+    <div class="Contenedor-tarjeta">
+      <a class="verMas" href="#Ecosistema">
+        <figure class="Figure">
+          <div class="Delantera">
+            <div class="Delantera-img">
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos1.jpg')); ?>" >
+            </div>
+            <div class="Delantera-text">
+              <h2>Ecosistemas</h2>
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
+            </div>
           </div>
-        </div>
-        <a class="verMas" href="#Ecosistema">
-          <figcaption class="trasera">
-            <h2 class="card-rotate-title">
-              Ecosistemas
-            </h2>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
-            <p class="card-rotate-description">
+          <div class="Trasera">
+            <h2 class="Trasera-title">Ecosistemas</h2>
+            <div class="Trasera-img">
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/globo.png')); ?>" >
+            </div>
+            <p class="Trasera-description">
               Diseñamos y ejecutamos programas que aceleran ecosistemas de emprendimiento e innovación.
             </p>
-            <p>Ver más</p>
-          </figcaption>
-        </a>
-      </figure>
-    </div>
-    <div class="card-rotate">
-      <figure class="card-rotate-figure">
-        <div class="delantera">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos2.jpg')); ?>" >
-          <div class="delantera-text">
-            <h2>Empresas</h2>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
+            <p class="Trasera-more">Ver más</p>
           </div>
-        </div>
-        <a class="verMas" href="#Empresa">
-          <figcaption class="trasera">
-            <h2 class="card-rotate-title">
-              Empresas
-            </h2>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
-            <p class="card-rotate-description">
+        </figure>
+      </a>
+    </div>
+    <div class="Contenedor-tarjeta">
+      <a class="verMas" href="#Empresa">
+        <figure class="Figure">
+          <div class="Delantera">
+            <div class="Delantera-img">
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos2.jpg')); ?>" >
+            </div>
+            <div class="Delantera-text">
+              <h2>Empresas</h2>
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
+            </div>
+          </div>
+          <div class="Trasera">
+            <h2 class="Trasera-title">Empresas</h2>
+            <div class="Trasera-img">
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/grafico.png')); ?>" >
+            </div>
+            <p class="Trasera-description descripcion-larga">
               Asistimos la incorporación de técnicas de gestión de la innovación y manejamos portafolios de innovación empresarial.
             </p>
-            <p>Ver más</p>
-          </figcaption>
-        </a>
-      </figure>
-    </div>
-    <div class="card-rotate">
-      <figure class="card-rotate-figure">
-        <div class="delantera">
-          <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos3.jpg')); ?>" >
-          <div class="delantera-text">
-            <h2>Innovación abierta</h2>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
+            <p class="Trasera-more more3">Ver más</p>
           </div>
-        </div>
-        <a class="verMas" href="#Innovacion">
-          <figcaption class="trasera">
-            <h2 class="card-rotate-title">
-              Innovación abierta
-            </h2>
-            <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
-            <p class="card-rotate-description">
+        </figure>
+      </a>
+    </div>
+    <div class="Contenedor-tarjeta">
+      <a class="verMas" href="#Innovacion">
+        <figure class="Figure">
+          <div class="Delantera">
+            <div class="Delantera-img">
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/Que-hacemos3.jpg')); ?>" >
+            </div>
+            <div class="Delantera-text">
+              <h2>Innovación abierta</h2>
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
+            </div>
+          </div>
+          <div class="Trasera">
+            <h2 class="Trasera-title">Innovación abierta</h2>
+            <div class="Trasera-img">
+              <img src="<?php echo esc_url(home_url('/wp-content/themes/quintil/img/avion.png')); ?>" >
+            </div>
+            <p class="Trasera-description">
               Estamos en sintonía con la vanguardia de las nuevas técnicas y metodologías en gestión de la Innovación.
             </p>
-            <p>Ver más</p>
-          </figcaption>
-        </a>
-      </figure>
+            <p class="Trasera-more">Ver más</p>
+          </div>
+        </figure>
+      </a>
     </div>
   </div>
   <div class="hacemos" id="Ecosistema">

@@ -36,6 +36,7 @@
       }
     }
     & p.Slider-item-text{
+      // border: 1px solid red;
       font-family: $primary-font;
       text-align: right;
       font-size: 1rem;
@@ -52,8 +53,28 @@
       }
       @include mq(lgs){
         top: 13rem;
+        width: 50vw;
+        left: 45%;
       }
     }
+  }
+}
+
+p.Slider-item-text.more-top{
+  top: 11.5rem;
+  // width: 90vw;
+  // left: 5%;
+  font-size: .9rem;
+  @include mq(mdl){
+    top: 16.5rem;
+    font-size: 1.5rem
+  }
+  @include mq(mdlH){
+    top: 12rem;
+    font-size: 1.5rem;
+  }
+  @include mq(lgs){
+    top: 19rem;
   }
 }
 
