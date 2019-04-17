@@ -84,7 +84,11 @@
     padding-top: 43%;
     opacity: 0;
     @include mq(lgs){
+      padding-top: 35%;
       opacity: 1;
+    }
+    @include mq(lgm){
+      padding-top: 30%;
     }
     & h2{
       color: white;
@@ -93,6 +97,13 @@
       font-size: 2.5rem;
       @include mq(md){
         font-size: 1.7rem; //agrandar segun pantalla
+      }
+      @include mq(lgs){
+        font-size: 2.5rem;
+      }
+      @include mq(lgm){
+        font-size: 3rem;
+        margin-bottom: 1rem;
       }
     }
     & img{
@@ -132,6 +143,12 @@
       font-size: 1.7rem;
       margin-top: .25rem;
     }
+    @include mq(lgs){
+      font-size: 2.2rem;
+    }
+    @include mq(lgm){
+      font-size: 3.3rem;
+    }
   }
   &-img{
     width: 30%;
@@ -145,6 +162,9 @@
     @include mq(md){
       width: 20%;
       margin: 0 auto;
+    }
+    @include mq(lgs){
+      width: 25%;
     }
   }
   &-description{
@@ -165,6 +185,16 @@
     @include mq(md){
       font-size: .7rem;
       text-transform: none;
+    }
+    @include mq(mdl){
+      padding: .5rem .7rem;
+      text-transform: uppercase;
+    }
+    @include mq(lgs){
+      font-size: .8rem;
+    }
+    @include mq(lgm){
+      font-size: 1rem;
     }
   }
   &-more{
@@ -189,6 +219,16 @@
       // align-self: center;
       margin-top: .25rem;
       border-top: 0;
+    }
+    @include mq(mdl){
+      border-top: 1px solid white;
+      text-transform: uppercase;
+      width: 4rem;
+    }
+    @include mq(lgm){
+      font-size: 1rem;
+      width: 5rem;
+      align-self: start;
     }
   }
 }
